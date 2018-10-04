@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+#header {
+    background-color:#fff;   
+    color:rgb(230, 23, 83);
+    height: 130px;
+    padding:20px;
+}
+
+#header .logo {
+    background-image: url(../images/logo_codespace.svg);
+    height: 100px;
+    background-repeat: no-repeat;
+    float:left;
+    width: 25%;
+}
+
+#header .titulo {
+   
+    height: 100px;
+    float:left;
+    width: 50%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#header .right {
+    
+    height: 100px;
+    float:right;
+    text-align: right;
+    padding-top:18px;
+    width: 25%;
+
+}
+
+#header .code {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 0px;
+    display: block;
+}
+
+#header .instructor {
+   font-size: 0.9em;
+}
+
+#footer {
+    background-color: rgb(230, 23, 83);
+    color:#fff;
+    background-image: url(../images/logo_codespace_negativo.svg);
+    background-position: center 14px;
+    height: 170px;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    clear:both;
+    margin-top:20px;
+}
+
+#footer .juan {
+    padding-top:90px;
+    text-align: center;
+    font-size: 0.80em;
+    color:#fff;
+}
+
+#footer .info {
+   
+    text-align: center;
+    font-size: 0.72em;
+     color:#fff;
+}
+
+html {
+    background: #fff;
+	margin:0;
+    padding:0;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif !importat;
+    padding:0;
+	margin:0;
+    background: #fff;
+    color:#333;
+}
+
+#main-content {
+    padding: 0px 20px;
+    min-height: 45vh;
+    margin-bottom: 20px;
+}
+
+#main-content code {
+    color:white;
+}
+
+#main-content pre {
+    background-color: #333;
+}

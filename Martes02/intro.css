@@ -1,0 +1,35 @@
+.primero{
+    color: rgb(199, 33, 33);
+    font-size: 1em;
+
+}
+.under{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
+}
+
+.segundo{
+    color: black;
+    font-size: 2em;
+
+}
+
+.tercero{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    font-size: 1.5em;
+}
+p.tercero:first-letter{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+h2{
+    text-decoration: underline;
+    font-weight: normal;
+}
+p{
+    text-indent: 1em;
+}

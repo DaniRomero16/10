@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div id="header">
+        <img class="logo" src="images/logo.png" alt="logo">
+        <ul>
+            <li>
+                <a href="index.html">Inicio | </a>
+            </li>
+            <li>
+                <a href="catalogo.html">Catálogo | </a>
+            </li>
+            <li>
+                <a href="nosotros.html">Sobre Nosotros | </a>
+            </li>
+            <li class="destacado">
+                <a href="contacto.html">Contacto</a>
+            </li>
+        </ul>
+    </div>
+    <div class="contacto" id="main">
+            <form>
+                    <br><h3 align="center">Rellene los siguientes campos</h3><br>
+                    <fieldset>
+                        <legend>
+                            Datos personales
+                        </legend>
+                        <input type="text" name="nombre" placeholder="Nombre"  required>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                        <input type="text" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Datos</legend>
+                        Sexo: 
+                        <input type="radio" name="sexo" id="hombre" value="hombre">
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" name="sexo" id="mujer" value="mujer">
+                        <label for="mujer">Mujer</label>
+                        <input type="radio" name="sexo" id="otro" value="otro">
+                        <label for="otro">Otro</label>
+                        <br><br>
+                        <select name="pais" id="pais">
+                            <option value="" selected>-Nacionalidad-</option>
+                            <optgroup label="Europa">
+                                <option value="es">España</option>
+                                <option value="fr">Francia</option>
+                                <option value="al">Alemania</option>
+                                <option value="gb">Gran Bretaña</option>
+                            </optgroup>
+                            <optgroup label="América">
+                                <option value="usa">Estados Unidos</option>
+                                <option value="ch">Chile</option>
+
+                            </optgroup>
+                        </select>
+                        <br><br>
+                        <input type="text" name="edad" placeholder="Edad" size="3">
+                    </fieldset><br>
+                    
+                    <fieldset>
+                        <legend>Observaciones</legend>
+                        <textarea name="observaciones" id="observaciones" rows="6" style="width: 100%" placeholder="Escriba Aquí"></textarea>
+                    </fieldset><br>
+
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Restablecer">
+
+
+
+                </form>
+    </div>
+    <div id="aside">
+            <h3>Últimas Noticias</h3>
+            <img src="images/koke.jpg" alt="koke"><br>
+            <a href="http://www.elmundo.es/deportes/futbol/2018/10/04/5bb5de15468aeb86188b4573.html" target="_blank">Novedades en la lista de L.Enrique</a><br>
+            <img src="images/messi.jpg" alt="messi"><br>
+            <a href="http://www.elmundo.es/deportes/futbol/2018/10/03/5bb5300fca47413e638b45b9.html" target="_blank">Messi rinde tributo a Wembley</a>
+        </div>
+    <div id="footer">
+            <div>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <a  href="https://twitter.com/" target="_blank"><img class="network" src="images/twitter.png"></a>
+                <a  href="https://www.linkedin.com/" target="_blank"><img class="network" src="images/linkedin.png"></a>
+                <a  href="https://www.instagram.com/?hl=es" target="_blank"><img class="network" src="images/instagram.png"></a>
+            </div>
+            <div>
+                C/ Compositor Lehmberg Ruiz, 13<br> 29007 Málaga<br> <a href="tel:955555555">955 55 55 55</a> <br><a href="mailto:juan@miempresa.com?subject=Prueba">EMAIL</a><br> www.sportonlineshop.com
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4 HTML | Daniel Romero Muñoz</title>
+</head>
+<!--  -->
+<body>
+    <table border="10px" cellspacing="0" cellpadding="5px" bordercolor="#0B3861">
+        <tr align="center">
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Clase</th>
+            <th>Extra</th>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="../Lunes 01/images/leon.jpg" width="85%" height="auto"><br>
+                <p align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et fermentum urna. Nullam lacinia
+                    sollicitudin urna, eu dapibus eros dictum a. Donec laoreet consectetur elit quis semper. Sed pellentesque
+                    faucibus eros. Nulla maximus diam mauris, in tempor nulla convallis ut.</p>
+            </td>
+            <td>León</td>
+            <td>Mamífero</td>
+            <td>
+                <ol type="a" align="left">
+                    <li><b>Primero</b></li>
+                    <li><i>segundo</i></li>
+                    <li>tercero</li>
+                    <li><u>cuarto</u></li>
+                    <li><del>quinto</del></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" bgcolor="#ccc" align="center">
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Wikipedia</a>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="../Lunes 01/images/oso-panda.jpg" width="85%" height="auto"><br>
+                <p align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et fermentum urna. Nullam lacinia
+                    sollicitudin urna, eu dapibus eros dictum a. Donec laoreet consectetur elit quis semper. Sed pellentesque
+                    faucibus eros. Nulla maximus diam mauris, in tempor nulla convallis ut.</p>
+            </td>
+            <td>Oso Panda</td>
+            <td>Mamífero</td>
+            <td>
+                <ul align="left">
+                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Primero</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Segundo</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Tercer</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" bgcolor="#ccc" align="center">
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Wikipedia</a>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="../Lunes 01/images/buho.jpg" width="85%" height="auto"><br>
+                <p align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et fermentum urna. Nullam lacinia
+                    sollicitudin urna, eu dapibus eros dictum a. Donec laoreet consectetur elit quis semper. Sed pellentesque
+                    faucibus eros. Nulla maximus diam mauris, in tempor nulla convallis ut.</p>
+            </td>
+            <td>Búho</td>
+            <td>Ave</td>
+            <td>
+                <ul align="left" style="list-style:none">
+                    <li>
+                        <a href="prueba1.html" target="_blank"><img src="../Lunes 01/images/natalia.jpg" alt="gasly"
+                            width="100%" height="auto"></a><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et.</p>
+                    </li>
+                    <li>
+                        <a href="prueba2.html" target="_blank"><img src="../Lunes 01/images/roberto.jpg" alt="gasly" 
+                            width="100%" height="auto"></a><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et.</p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" bgcolor="#ccc" align="center">
+                <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Wikipedia</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <form>
+                    <br><h3 align="center">Rellene los siguientes campos</h3><br>
+                    <fieldset>
+                        <legend>
+                            Datos personales
+                        </legend>
+                        <input type="text" name="nombre" placeholder="Nombre" style="margin-bottom: 8px;margin-top:10px" required><br>
+                        <input type="text" name="apellidos" placeholder="Apellidos" required>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Datos</legend>
+                        Estado Civil: 
+                        <input type="radio" name="civil" id="soltero" value="soltero">
+                        <label for="soltero">Soltero</label>
+                        <input type="radio" name="civil" id="casado" value="casado">
+                        <label for="casado">Casado</label>
+                        <input type="radio" name="civil" id="viudo" value="viudo">
+                        <label for="viudo">Viudo</label>
+                        <input type="radio" name="civil" id="otro" value="otro">
+                        <label for="otro">Otro</label>
+                        <br><br>
+                        <select name="pais" id="pais">
+                            <option value="" selected>-Nacionalidad-</option>
+                            <optgroup label="Europa">
+                                <option value="es">España</option>
+                                <option value="fr">Francia</option>
+                                <option value="al">Alemania</option>
+                                <option value="gb">Gran Bretaña</option>
+                            </optgroup>
+                            <optgroup label="América">
+                                <option value="usa">Estados Unidos</option>
+                                <option value="ch">Chile</option>
+
+                            </optgroup>
+                        </select>
+                        <br><br>
+                        <input type="text" name="edad" placeholder="Edad" size="3">
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Dirección</legend>
+                        <input type="text" name="calle" placeholder="Calle" style="margin-bottom: 8px;margin-top:10px">
+                        <input type="text" name="numero" placeholder="Número">
+                        <input type="text" name="piso" placeholder="Piso"><br>
+                        <input type="text" name="cp" placeholder="Código Postal">
+                        <input type="text" name="localidad" placeholder="Localidad">
+                        <input type="text" name="provincia" placeholder="Provincia">
+                        <input type="text" name="pais2" placeholder="País" ><br>
+
+
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Observaciones</legend>
+                        <textarea name="observaciones" id="observaciones" rows="6" style="width: 100%" placeholder="Escriba Aquí"></textarea>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>
+                            ¿Vives con Mascotas?
+                        </legend>
+                        <input type="checkbox" name="mascota1" id="mascota1" value="perro">
+                        <label for="mascota1">Perro</label>
+                        <input type="checkbox" name="mascota2" id="mascota2" value="gato">
+                        <label for="mascota2">Gato</label>
+                        <input type="checkbox" name="mascota3" id="mascota3" value="loro">
+                        <label for="mascota3">Loro</label>
+                        <input type="checkbox" name="mascota4" id="mascota4" value="otro">
+                        <label for="mascota4">Otro</label>
+                    </fieldset><br>
+
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Restablecer">
+
+
+
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
