@@ -10,10 +10,10 @@ h1, #aside h3{
     background-color: rgb(255, 255, 255);
 }
 div{
-    background-color: rgb(161, 154, 154);
+    background-color: rgb(197, 193, 193);
     margin: 0.5%;
     padding: 10px;
-    border: 1.5px black solid;
+    border: 1.8px black solid;
 }
 .logo{
     width: 150px;
