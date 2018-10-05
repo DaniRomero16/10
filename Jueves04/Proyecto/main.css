@@ -4,6 +4,7 @@
 }
 h1, #aside h3{
     font-variant: small-caps;
+    text-shadow: 1px 1px 2px whitesmoke, 0 0 1em rgb(240, 135, 49), 0 0 0.2em rgb(240, 135, 49);
 }
 
 .destacado{
@@ -112,6 +113,7 @@ input[type="text"]#apellidos{
 
 .precio{
     font-size: 2em;
+    text-shadow: 1px 1px 2px whitesmoke, 0 0 1em rgb(240, 135, 49), 0 0 0.2em rgb(240, 135, 49);
 }
 
 #main img, #aside img, iframe{
