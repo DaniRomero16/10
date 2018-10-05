@@ -11,7 +11,7 @@ h1, #aside h3{
 }
 div{
     background-color: rgb(161, 154, 154);
-    margin: 15px;
+    margin: 0.5%;
     padding: 10px;
     border: 1.5px black solid;
 }
@@ -20,11 +20,6 @@ div{
     margin: auto auto auto 20px;
 }
 
-#aside *{
-    width: 85%;
-    margin: 0px auto;
-    
-}
 ul{
     list-style: none;
     margin: auto 20px auto auto;
@@ -52,13 +47,17 @@ a:active{
 
 }
 #aside{
-    position: absolute;
-    right: 0%;
-    width: 24.5%;
+    float: right;
+    width: 27.5%;
 
     color: black;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
+
+#aside img{
+    width: 80%
+}
+
 #footer{
     clear: both;
     display: flex;
@@ -85,15 +84,18 @@ a:active{
 #main p{
     text-align: justify;
 }
+input[type="text"]#nombre {
+    width: 12%;
+}
 input[type="text"]#email {
-    width: 450px;
+    width: 35%;
 }
 input[type="text"]#apellidos{
-    width: 300px;
+    width: 18%;
 }
 .catalogo#main img{
     width: 80%;
-    height: 250px;
+    height: auto;
 }
 .catalogo#main ul{
     float: center;
@@ -105,6 +107,7 @@ input[type="text"]#apellidos{
     display: flex;
     text-align: center;
     height: 500px;
+    
 }
 .catalogo#main p{
     text-align: center
