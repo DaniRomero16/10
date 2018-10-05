@@ -124,9 +124,9 @@ iframe{
 #divlogo{
     display: flex;
 
+
 }
-.network{
+.network img{
     width: 20%;
-    height: auto;
-    margin: 0 3%;
+    margin: 0 6%;
 }
