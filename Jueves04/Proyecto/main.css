@@ -129,6 +129,11 @@ iframe{
 
 }
 .network img{
-    width: 20%;
-    margin: 0 6%;
+    width: 80%;
+}
+.network{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
