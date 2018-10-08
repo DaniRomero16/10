@@ -31,7 +31,6 @@ div{
 
 ul{
     list-style: none;
-    margin: 30px 20px auto auto;
     font-size: 1.10em;
 
 }
@@ -39,6 +38,7 @@ ul{
     display: inline-flex;
     font-size: 1.5em;
     z-index: 1;
+    margin: 30px 20px auto auto;
 }
 #header{
     padding: 0;
@@ -116,15 +116,14 @@ a:active{
 #footer{
     clear: both;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 155px;
     width: 95%
 }
 #footer div{
-    margin: 15px auto;
     background-color: rgb(238, 229, 229);
     width: 27%;
-    padding: 15px
+
 }
 #fotoindex{
     width: 70%;
