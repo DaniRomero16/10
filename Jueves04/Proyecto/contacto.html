@@ -10,84 +10,88 @@
 </head>
 
 <body>
-    <div id="header">
-        <img class="logo" src="images/logo.png" alt="logo">
-        <ul>
-            <li>
-                <a href="index.html">Inicio | </a>
-            </li>
-            <li>
-                <a href="catalogo.html">Catálogo | </a>
-            </li>
-            <li>
-                <a href="nosotros.html">Sobre Nosotros | </a>
-            </li>
-            <li class="destacado">
-                <a href="contacto.html">Contacto</a>
-            </li>
-        </ul>
+        <div id="header">
+                <img class="logo" src="images/logo.png" alt="logo">
+                <ul>
+                    <li><a  href="index.html">Inicio | </a></li>
+                    <li><a href="catalogo.html">Catálogo | </a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros | </a></li>
+                    <li><a class="destacado" href="contacto.html">Contacto</a></li>
+                </ul>
+                <div id="contenedor-video">
+                    <video loop autoplay muted>
+                        <source src="images/Pexels Videos 4998.mp4">
+                    </video>
+                    <div class="capa-filtro"></div>
+        
+                </div>
+            </div>
+    <div class="centro">
+        <div class="contacto" id="main">
+            <form>
+                <br>
+                <h3 align="center">Rellene los siguientes campos</h3><br>
+                <fieldset>
+                    <legend>
+                        Datos personales
+                    </legend>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    Fecha Nacimiento: <input type="date" id="date" name="date" required>
+                </fieldset><br>
+                <fieldset>
+                    <legend>Datos</legend>
+                    Sexo:
+                    <input type="radio" name="sexo" id="hombre" value="hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="sexo" id="mujer" value="mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="sexo" id="otro" value="otro">
+                    <label for="otro">Otro</label>
+                    <br><br>
+                    <select name="pais" id="pais">
+                        <option value="" selected>-Nacionalidad-</option>
+                        <optgroup label="Europa">
+                            <option value="es">España</option>
+                            <option value="fr">Francia</option>
+                            <option value="al">Alemania</option>
+                            <option value="gb">Gran Bretaña</option>
+                        </optgroup>
+                        <optgroup label="América">
+                            <option value="usa">Estados Unidos</option>
+                            <option value="ch">Chile</option>
+    
+                        </optgroup>
+                    </select>
+                    <br><br>
+                    <input type="text" name="edad" placeholder="Edad" size="3">
+                    BG Preference: <input type="color" name="color">
+                </fieldset><br>
+    
+                <fieldset>
+                    <legend>Observaciones</legend>
+                    <textarea name="observaciones" id="observaciones" rows="6" style="width: 100%" placeholder="Escriba Aquí"></textarea>
+                </fieldset><br>
+    
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+    
+    
+    
+            </form>
+        </div>
+        <div id="aside">
+            <h3>Últimas Noticias</h3>
+            <img src="images/koke.jpg" alt="koke"><br>
+            <a href="http://www.elmundo.es/deportes/futbol/2018/10/04/5bb5de15468aeb86188b4573.html" target="_blank">Novedades
+                en la lista de L.Enrique</a><br>
+            <img src="images/messi.jpg" alt="messi"><br>
+            <a href="http://www.elmundo.es/deportes/futbol/2018/10/03/5bb5300fca47413e638b45b9.html" target="_blank">Messi
+                rinde tributo a Wembley</a>
+        </div>
     </div>
-    <div class="contacto" id="main">
-        <form>
-            <br>
-            <h3 align="center">Rellene los siguientes campos</h3><br>
-            <fieldset>
-                <legend>
-                    Datos personales
-                </legend>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-                <input type="text" id="email" name="email" placeholder="Correo Electrónico" required>
-            </fieldset><br>
-            <fieldset>
-                <legend>Datos</legend>
-                Sexo:
-                <input type="radio" name="sexo" id="hombre" value="hombre">
-                <label for="hombre">Hombre</label>
-                <input type="radio" name="sexo" id="mujer" value="mujer">
-                <label for="mujer">Mujer</label>
-                <input type="radio" name="sexo" id="otro" value="otro">
-                <label for="otro">Otro</label>
-                <br><br>
-                <select name="pais" id="pais">
-                    <option value="" selected>-Nacionalidad-</option>
-                    <optgroup label="Europa">
-                        <option value="es">España</option>
-                        <option value="fr">Francia</option>
-                        <option value="al">Alemania</option>
-                        <option value="gb">Gran Bretaña</option>
-                    </optgroup>
-                    <optgroup label="América">
-                        <option value="usa">Estados Unidos</option>
-                        <option value="ch">Chile</option>
-
-                    </optgroup>
-                </select>
-                <br><br>
-                <input type="text" name="edad" placeholder="Edad" size="3">
-            </fieldset><br>
-
-            <fieldset>
-                <legend>Observaciones</legend>
-                <textarea name="observaciones" id="observaciones" rows="6" style="width: 100%" placeholder="Escriba Aquí"></textarea>
-            </fieldset><br>
-
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Restablecer">
-
-
-
-        </form>
-    </div>
-    <div id="aside">
-        <h3>Últimas Noticias</h3>
-        <img src="images/koke.jpg" alt="koke"><br>
-        <a href="http://www.elmundo.es/deportes/futbol/2018/10/04/5bb5de15468aeb86188b4573.html" target="_blank">Novedades
-            en la lista de L.Enrique</a><br>
-        <img src="images/messi.jpg" alt="messi"><br>
-        <a href="http://www.elmundo.es/deportes/futbol/2018/10/03/5bb5300fca47413e638b45b9.html" target="_blank">Messi
-            rinde tributo a Wembley</a>
-    </div>
+    
     <div id="footer">
         <div>
             <ul>
