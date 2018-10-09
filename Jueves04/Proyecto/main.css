@@ -43,6 +43,7 @@ ul{
 }
 #header ul li a{
     padding: 10px;
+    color: white;
 }
 #header{
     padding: 0;
@@ -190,7 +191,7 @@ iframe{
 }
 .network{
     display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
 }
@@ -324,6 +325,7 @@ body {
         margin: 7px;
     }
 }
+
 
 @media (max-width:390px){
   #header{
