@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        
+        var valor1 = parseInt(prompt("a: "));
+        var valor2 = parseInt(prompt("b: "));
+        var valor3 = parseInt(prompt("c: "));
+        var logica;
+        if (valor3 + valor2 == valor1) {
+            logica = true;
+            console.log("Se cumple que: a=b+c");
+        } else if(valor3 + valor1 == valor2) {
+            logica = true;
+            console.log("Se cumple que: b=a+c");
+        } else if(valor1 + valor2 == valor3){
+            logica = true;
+            console.log("Se cumple que: c=a+b");
+        } else{
+            logica = false;
+            console.log("Los números no cumplen la condición. ");
+        }
+
+        console.log(logica);
+        
+    
+    </script>    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 2.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+</html>

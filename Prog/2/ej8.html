@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        
+        var number1 = parseInt(prompt("Numero 1: "));
+        var number2 = parseInt(prompt("Numero 2: "));
+        
+        console.log("Número introducidos: "+number1+" "+number2);
+
+        var resultado = ejercicio(number1, number2);
+        if (resultado == -1) {
+            console.log("No se calcula la suma porque alguno de los números o los dos no son positivos");
+        } else {
+            console.log("La suma de los dos números es: "+resultado);
+        }
+
+        function ejercicio(num1, num2) {
+            if (num1 >= 0 && num2 >= 0) {
+                return (num1 + num2);
+            } else {
+                return -1;
+            }
+        }
+        
+    </script>    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+</html>
