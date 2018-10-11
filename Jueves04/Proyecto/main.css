@@ -78,7 +78,7 @@ ul{
 }
 
 #header #contenedor-video .capa-filtro {
-     background-color: rgba(0,0,0,.7);
+    background: linear-gradient(to right, rgb(0, 0, 0) 17%, rgba(255,255,255,0));
      height: 100%;
      width: 100%;
     position:absolute;
