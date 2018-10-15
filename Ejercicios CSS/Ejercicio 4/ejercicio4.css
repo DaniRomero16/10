@@ -1,0 +1,72 @@
+#container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    position: absolute;
+    padding: 5px;
+}
+
+.ex01 .box {
+    left: 10px;
+    top: 10px;
+    animation-name: animacion1;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.ex02 .box {
+    left: 10px;
+    top: 130px;
+    animation-name: animacion2;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.ex03 .box {
+    left: 10px;
+    top: 250px;
+    animation-name: animacion1;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.ex04 .box {
+    left: 10px;
+    top: 370px;
+    animation-name: animacion2;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animacion1{
+    100%{
+       transform: translate(200px, 120px) rotate(270deg);
+       width: 50px;
+        height: 50px;
+        background-color: blue;
+        color: yellow;
+        font-size: 18px;
+    }
+}
+
+@-webkit-keyframes animacion2{
+    100%{
+       transform: translate(200px, -120px) rotate(270deg);
+       width: 50px;
+        height: 50px;
+        background-color: blue;
+        color: yellow;
+        font-size: 18px;
+    }
+}

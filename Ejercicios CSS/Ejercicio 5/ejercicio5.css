@@ -1,0 +1,55 @@
+body {
+    margin: 0px;
+}
+
+#container {
+    background: #666 url(tree.jpg) no-repeat -60px 0;
+    width: 420px;
+    height: 480px;
+    position: relative;
+}
+
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+
+}
+
+.snowflake.f1 {
+    left: 40px;
+    animation-name: caer;
+    animation-duration: 5.5s;
+    animation-iteration-count: infinite;
+}
+
+.snowflake.f2 {
+    font-size: 1.8em;
+    left: 120px;
+    animation-name: caer;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.snowflake.f3 {
+    left: 200px;
+    animation-name: caer;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.snowflake.f4 {
+    font-size: 1.5em;
+    left: 280px;
+    animation-name: caer;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes caer{
+    100%{
+        transform: translate(0px, 490px);
+        opacity: 0;
+    }
+
+}
