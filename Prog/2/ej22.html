@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    var number1 = prompt("Numero 1: ");
+    var number2 = prompt("Numero 2: ");
+
+    console.log("Número introducidos: " + number1 + " " + number2);
+
+    if (esEntero(number1) || esEntero(number2)) {
+        console.log("Alguno de los números no es entero! ");
+    } else {
+        var resultado = ejercicio(parseInt(number1), parseInt(number2));
+        if (resultado == -1) {
+            console.log("No se calcula la suma porque alguno de los números o los dos no son positivos");
+        } else {
+            console.log("La suma de los dos números es: " + resultado);
+        }
+    }
+
+    function esEntero(num) {
+         var parteEntera = parseInt(num);
+    
+        if (parteEntera == num){
+            return true;
+        }
+         else {
+            return false;
+        }
+    }
+
+    function ejercicio(num1, num2) {
+        if (num1 >= 0 && num2 >= 0) {
+            return (num1 + num2);
+        } else {
+            return -1;
+        }
+    }
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        var numero = prompt();
+		if (esEntero(numero) == false){
+			numero = prompt();
+			if (esEntero(numero) == false){
+				numero = prompt();
+				if (esEntero(numero) == false){
+					numero = prompt();
+					if (esEntero(numero) == false){
+						numero = prompt();
+						if (esEntero(numero) == true){
+							console.log(numero);
+						} else {
+							console.log("Eres Imbécil.");
+						}
+					} 
+				}
+			}
+		}
+		
+        function esEntero(num) {
+            var parteEntera = parseInt(num);
+        
+            if (parteEntera == num){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }    
+
+    </script>    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+</html>

@@ -2,20 +2,38 @@
 <html>
     <script>
         
-        var valor1 = parseInt(prompt("a: "));
-        var valor2 = parseInt(prompt("b: "));
-        var valor3 = parseInt(prompt("c: "));
-
-        if (valor3 + valor2 == valor1) {
-            console.log("Se cumple que: a=b+c");
-        } else if(valor3 + valor1 == valor2) {
-            console.log("Se cumple que: b=a+c");
-        } else if(valor1 + valor2 == valor3){
-            console.log("Se cumple que: c=a+b");
-        } else{
-            console.log("Los números no cumplen la condición. ");
+        var valor1 = prompt("a: ");
+        var valor2 = prompt("b: ");
+        var valor3 = prompt("c: ");
+        
+        if ((esEntero(valor1)) || esEntero(valor2) || esEntero(valor3)) {
+            console.log("Alguno de los números no es entero! ");
+        } else {
+            valor1 = parseInt(valor1);
+            valor2 = parseInt(valor2);
+            valor3 = parseInt(valor3);
+            
+            if (valor3 + valor2 == valor1) {
+                console.log("Se cumple que: a=b+c");
+            } else if(valor3 + valor1 == valor2) {
+                console.log("Se cumple que: b=a+c");
+            } else if(valor1 + valor2 == valor3){
+                console.log("Se cumple que: c=a+b");
+            } else{
+                console.log("Los números no cumplen la condición. ");
+            }
         }
-    
+        
+        function esEntero(num) {
+            var parteEntera = parseInt(num);
+        
+            if (parteEntera == num){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }    
     </script>    
 <head>
     <meta charset="utf-8" />
