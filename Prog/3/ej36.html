@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <script>
-	var i = 0;
-	while (i < 5) {
-		console.log("Estamos estudiando los bucles.");
-		i++;
-	}
+    var print;
+    for (var i = 1; i < 10; i++) {
+        console.log("\nLa tabla del "+i+":");
+        for (var j = 1; j <= 10; j++) {
+            print = i*j;
+            console.log(i+" x "+j+" = "+print);
+        }
+        
+    }
 	
 </script>    
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 3.1</title>
+    <title>Ejercicio 3.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
