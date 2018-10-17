@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script>
+    
+   function esEntero(num) {
+      var parteEntera = parseInt(num);
+
+      if (parteEntera == num){
+          return true;
+      }
+      else {
+          return false;
+      }
+    }
+	
+    var contador = 0;
+    var mayor;
+    
+    do {
+        var numero = prompt();        
+        if (esEntero(numero) == true) {        
+            numero = parseInt(numero);            
+            if (numero >= 0) {            
+                if (contador == 0) {
+                    mayor = numero;
+                }                
+                if (mayor < numero) {
+                    mayor = numero;                    
+                }                
+                contador++;
+            }
+            else {
+                console.log("No es positivo");
+            }
+        }
+        else {
+            console.log("No es entero");
+        }        
+    } while (contador < 5);
+    
+    console.log("El mayor ha sido: " + mayor);
+	
+</script>    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+</html>

@@ -3,19 +3,30 @@
 <script>
     
     for (var i = 0; i < 24; i++) {
-        for (var j = 0; j < 60; j++) {
+	
+		if (i<10){
+			i = "0" + i;
+		}
+        
+		for (var j = 0; j < 60; j++) {
+			if(j < 10){
+				j = "0" + j;
+			}
             for (var k = 0; k < 60; k++) {
+				if (k < 10){
+					k = "0" + k;
+				}
                 console.log(i+":"+j+":"+k)
             }
         }
         
-    }
+    }	
 	
 </script>    
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 3.6</title>
+    <title>Ejercicio 3.7</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>

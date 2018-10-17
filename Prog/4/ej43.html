@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
 <script>
-    var n = 0;
-    var cont = 0;
-    var resultado = 0;
     
-    do {
-        n = parseInt(prompt());
-        if (n > resultado) {
-            resultado = n;
-        } cont++;
-    } while (cont < 5);
+    var n = parseInt(prompt());
     
-    console.log("El mayor ha sido: " + resultado);
-	
+    for (var i = 0; i < n; i++) {
+        var print = "";
+        for (var j = 0; j < (i+1); j++) {
+            print = print +"*";   
+        }
+        console.log(print);
+    }
+
 </script>    
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 3.4</title>
+    <title>Ejercicio 4.3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>

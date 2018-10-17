@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script>
+    
+    function hacerSerie (num, rep){
+		var exit = "";
+		var sum = 0;
+		var sumaFinal = 0;
+		
+		num = parseInt(num);
+		rep = parseInt(rep);
+		
+		console.log("Número: " + num);
+		console.log("Número de repeticiones: " + rep);
+		console.log("Salida del programa:");
+		
+		for(var i = 0; i < rep;i++){
+			var parte = "";
+			for(var j = 0; j < (i+1);j++){
+				parte += num;
+			}
+			exit += parte + " ";
+			parte = parseInt(parte);
+			sumaFinal += parte;
+		}
+		console.log(exit);
+		console.log("La suma de la serie es: " + sumaFinal)
+	}
+	
+	var numero = prompt("Número");
+	var repeticiones = prompt("Repeticiones");
+	
+	hacerSerie(numero, repeticiones);
+	
+</script>    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4.5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+</html>
