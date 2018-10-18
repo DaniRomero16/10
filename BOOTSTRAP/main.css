@@ -51,14 +51,15 @@
     height: 350px;
 }
 
-h2{
+h2, h1, p, .visita2{
     text-shadow: 1px 1px 4px rgb(0, 0, 0);
     z-index: 2;
 }
 
 .malaga img, .sevilla img, .cordoba img, .huelva img, .jaen img, .cadiz img, .almeria img, .granada img {
     width: 40%;
-    display: none
+    opacity: 0;
+    transition-duration: 1s;
 }
 .granada img{
     width: 20%
@@ -68,5 +69,60 @@ h2{
 }
 
 .malaga:hover img, .sevilla:hover img, .cordoba:hover img, .huelva:hover img, .jaen:hover img, .cadiz:hover img, .almeria:hover img, .granada:hover img{
-    display: inline;
+    opacity: 1;
 }
+
+.imagen1{
+
+    background-image: url(images/jaen-kT0H-U203157915283EUE-575x323@Ideal.jpg)
+ 
+ }
+ 
+ .imagen2{
+    background-image: url(images/silversea-mediterranean-cruise-malaga-spain.jpg)
+ 
+ }
+ 
+ .imagen3{
+ 
+    background-image: url(images/Alhambra-3.jpg)
+ 
+ }
+ 
+ .imagenCarousel{
+    background-size: cover;
+    height: 80vh;
+    background-repeat: no-repeat;
+ }
+
+.visita {
+    font-size: 3rem;
+}
+
+.visita2 {
+    font-size: 2rem;
+}
+
+i{
+    font-size: 5rem;
+    color: rgb(221, 20, 104);
+}
+
+ul{
+    list-style: none;
+}
+
+ul a{
+    color: white
+}
+
+a i{
+    color: white;
+    font-size: 3rem;
+    margin: 3px;
+}
+nav i{
+    color: white;
+    font-size: 3rem;
+}
+
