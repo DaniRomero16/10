@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <script>
+    
+	let colores = ["azul", "amarillo", "rojo", "verde", "negro", "gris"];
 	
-	var i = 0;
-	while (i < 5) {
-		console.log("Estamos estudiando los bucles.");
-		i++;
+	let opcion = prompt();
+	let existe = false;
+	for (let i = 0; i < colores.length; i++){
+		if(opcion == colores [i]){
+			existe = true;
+		}
 	}
+	
+	console.log(existe);
 	
 </script>    
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 3.1</title>
+    <title>Ejercicio 4.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>

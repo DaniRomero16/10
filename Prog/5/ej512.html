@@ -6,9 +6,25 @@
 	cambiarTiempo(a);
 	
     function cambiarTiempo (num){
-		console.log("Horas: " + (num / 3600));
-		console.log("Minutos: " + (num / 60));
-		console.log("Segundos: " + num);
+		let horas = parseInt(num / 3600);
+		let minutos = parseInt((num % 3600)/60);
+		let segundos = parseInt((num % 3600)% 60);	
+		
+		console.log("Horas: " + horas);
+		console.log("Minutos: " + minutos);
+		console.log("Segundos: " + segundos);
+				
+		if (horas < 10){
+			horas = "0" + horas;
+		}
+		if (minutos < 10){
+			minutos = "0" + minutos;
+		}
+		if (segundos < 10){
+			segundos = "0" + segundos;
+		}
+		
+		console.log("\n"+horas+":"+minutos+":"+segundos);
 	}    
     
 	
