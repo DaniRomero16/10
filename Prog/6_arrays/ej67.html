@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html>
 <script>
-    
-    
-	let a = prompt();
-	esPositivo(a);
-	
-    function esPositivo (num){
-		if(num >= 0){
-			console.log("Es Positivo");
-		} else{
-			console.log("Es Negativo");
-		}
+
+
+	let a = [1, 2, 3];
+	let b = [1, 2, 4];
+	let arrayFinal = [];
+
+	for (let i = 0; i < a.length; i++) {
+		arrayFinal.push(a[i]);
+		arrayFinal.push(b[i]);
 	}
-	
-	
-	
-</script>    
+
+	imprimirArray(arrayFinal);
+
+	function imprimirArray(array) {
+		let imprimir = "";
+		for (let i = 0; i < array.length; i++) {
+			imprimir += " " + array[i];
+		}
+		console.log("[" + imprimir + " ]");
+	}
+
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>

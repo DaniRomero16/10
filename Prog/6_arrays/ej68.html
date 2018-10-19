@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html>
 <script>
-    
-    
-	let a = prompt();
-	esPositivo(a);
-	
-    function esPositivo (num){
-		if(num >= 0){
-			console.log("Es Positivo");
-		} else{
-			console.log("Es Negativo");
+
+	let uno = 0;
+	let dos = 0;
+	let tres = 0;
+	let cuatro = 0;
+	let cinco = 0;
+	let seis = 0;
+
+	let tiradas = [];
+
+	for (let i = 0; i < 10000; i++) {
+		switch (getRandomInt(1, 7)) {
+			case 1:
+				uno++;
+				break;
+
+			case 2:
+				dos++;
+				break;
+
+			case 3:
+				tres++;
+				break;
+
+			case 4:
+				cuatro++;
+				break;
+
+			case 5:
+				cinco++;
+				break;
+
+			case 6:
+				seis++;
+				break;
+
+			default:
+				break;
 		}
 	}
-	
-	
-	
-</script>    
+
+	tiradas[0] = uno;
+	tiradas[1] = dos;
+	tiradas[2] = tres;
+	tiradas[3] = cuatro;
+	tiradas[4] = cinco;
+	tiradas[5] = seis;
+
+	imprimirArray(tiradas);
+
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min)) + min;
+	}
+
+	function imprimirArray(array) {
+		let imprimir = "";
+		for (let i = 0; i < array.length; i++) {
+			imprimir += " " + array[i];
+		}
+		console.log("[" + imprimir + " ]");
+	}
+
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>

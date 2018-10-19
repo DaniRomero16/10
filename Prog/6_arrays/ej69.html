@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
 <script>
-    
-    
-	let a = prompt();
-	esPositivo(a);
 	
-    function esPositivo (num){
-		if(num >= 0){
-			console.log("Es Positivo");
-		} else{
-			console.log("Es Negativo");
+	let a = ["Banana", "Mango", "Manzana"];
+
+	a.push("Kiwi");
+
+	for (let i = 0; i < a.length; i++) {
+		if (a[i] == "Mango"){
+			a.splice(i,1);
 		}
+		
 	}
-	
-	
+
+	a.sort();
+
+	a = a.concat(["Pera", "Naranja", "Fresa"]);
+
+	imprimirArray(a);
+
+	function imprimirArray(array) {
+		let imprimir = "";
+		for (let i = 0; i < array.length; i++) {
+			imprimir += " " + array[i];
+		}
+		console.log("[" + imprimir + " ]");
+	}
+
+
+
 	
 </script>    
 <head>
