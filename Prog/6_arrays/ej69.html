@@ -4,8 +4,12 @@
 	
 	let a = ["Banana", "Mango", "Manzana"];
 
+	console.log(a);
+	
 	a.push("Kiwi");
-
+	
+	console.log(a);
+	
 	for (let i = 0; i < a.length; i++) {
 		if (a[i] == "Mango"){
 			a.splice(i,1);
@@ -13,19 +17,16 @@
 		
 	}
 
+	console.log(a);
+
 	a.sort();
+
+	console.log(a);
 
 	a = a.concat(["Pera", "Naranja", "Fresa"]);
 
-	imprimirArray(a);
+	console.log(a);
 
-	function imprimirArray(array) {
-		let imprimir = "";
-		for (let i = 0; i < array.length; i++) {
-			imprimir += " " + array[i];
-		}
-		console.log("[" + imprimir + " ]");
-	}
 
 
 

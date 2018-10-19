@@ -49,18 +49,10 @@
 	tiradas[4] = cinco;
 	tiradas[5] = seis;
 
-	imprimirArray(tiradas);
+	console.log(tiradas);
 
 	function getRandomInt(min, max) {
 		return Math.floor(Math.random() * (max - min)) + min;
-	}
-
-	function imprimirArray(array) {
-		let imprimir = "";
-		for (let i = 0; i < array.length; i++) {
-			imprimir += " " + array[i];
-		}
-		console.log("[" + imprimir + " ]");
 	}
 
 
