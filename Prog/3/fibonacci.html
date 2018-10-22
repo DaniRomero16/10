@@ -4,7 +4,7 @@
     var a = parseInt(prompt());
     iterative(a);
     // recursive(a);
-    
+
     // function recursive(n){
     //     var f = n;
     //     if (n > 1){
@@ -13,28 +13,31 @@
     //     return f;   
     // }
 
-    function iterative (n){
+    function iterative(n) {
         var f = 0;
         var f0 = 0;
         var f1 = 1;
-        for(var i = 0; i < n; i++){
+        for (var i = 0; i < n; i++) {
             f = f0 + f1;
             f0 = f1;
             f1 = f;
             console.log(f);
         }
     }
-	
-</script>    
+
+</script>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ejercicio 3.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
     <p> Abre la consola </p>
 
 </body>
+
 </html>

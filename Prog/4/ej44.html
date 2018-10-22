@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html>
 <script>
-    
-	function esEntero(num) {
-      var parteEntera = parseInt(num);
 
-      if (parteEntera == num){
-          return true;
-      }
-      else {
-          return false;
-      }
-    }
-	
-	function potencia (bas, exponente){
+	function esEntero(num) {
+		var parteEntera = parseInt(num);
+
+		if (parteEntera == num) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	function potencia(bas, exponente) {
 		var res = bas;
-		
-		for(var i = 0;i < (exponente -1);i++){
+
+		for (var i = 0; i < (exponente - 1); i++) {
 			res *= bas;
 		}
-		
+
 		return res;
 	}
-	
-	
-	
-	do{
-	
+
+
+
+	do {
+
 		var base = prompt("Introduce la base. ");
 		var exp = prompt("Introduce el exponente. ");
-		
-	} while(esEntero(base) == false || esEntero(exp) == false)
-	
+
+	} while (esEntero(base) == false || esEntero(exp) == false)
+
 	var resultado = potencia(base, exp);
 	console.log("Resultado: " + resultado)
-	
-</script>    
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.4</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.4</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>

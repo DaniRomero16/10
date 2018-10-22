@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
 <script>
-      
-    let horas = prompt("horas");
+
+	let horas = prompt("horas");
 	let salario = prompt("salario x hora");
-	
+
 	console.log(calcularSueldo(horas, salario));
-	
-    function calcularSueldo (horas, salario){
-		
-		if (horas > 40){
+
+	function calcularSueldo(horas, salario) {
+
+		if (horas > 40) {
 			return ((40 * salario) + ((horas - 40) * salario * 1.5));
 		} else {
 			return salario * horas;
 		}
-		
+
 	}
-	
-</script>    
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>

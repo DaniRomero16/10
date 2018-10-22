@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
 <script>
-    
+
 	let a = prompt();
 	console.log(esPrimo(a));
-	
-    function esPrimo (num){
+
+	function esPrimo(num) {
 		let serPrimo = true;
-		
-		for (let i = 2; i < 12; i++){
-			if (num % i == 0 && num != i){
+
+		for (let i = 2; i < 12; i++) {
+			if (num % i == 0 && num != i) {
 				serPrimo = false;
 			}
 		}
 		return serPrimo;
 	}
-	
-</script>    
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>

@@ -4,40 +4,43 @@
 
 	let a = prompt();
 	cambiarTiempo(a);
-	
-    function cambiarTiempo (num){
+
+	function cambiarTiempo(num) {
 		let horas = parseInt(num / 3600);
-		let minutos = parseInt((num % 3600)/60);
-		let segundos = parseInt((num % 3600)% 60);	
-		
+		let minutos = parseInt((num % 3600) / 60);
+		let segundos = parseInt((num % 3600) % 60);
+
 		console.log("Horas: " + horas);
 		console.log("Minutos: " + minutos);
 		console.log("Segundos: " + segundos);
-				
-		if (horas < 10){
+
+		if (horas < 10) {
 			horas = "0" + horas;
 		}
-		if (minutos < 10){
+		if (minutos < 10) {
 			minutos = "0" + minutos;
 		}
-		if (segundos < 10){
+		if (segundos < 10) {
 			segundos = "0" + segundos;
 		}
-		
-		console.log("\n"+horas+":"+minutos+":"+segundos);
-	}    
-    
-	
-</script>    
+
+		console.log("\n" + horas + ":" + minutos + ":" + segundos);
+	}
+
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>

@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html>
 <script>
-    
-	let vector = [1,2,3,4,5,6];
+
+	let vector = [1, 2, 3, 4, 5, 6];
 	ejercicio(vector);
-	
-	function ejercicio (array){
+
+	function ejercicio(array) {
 		let cont = 0;
 		console.log("\nPunto 1:\n");
-		while(cont < array.length){
+		while (cont < array.length) {
 			console.log(array[cont]);
 			cont++;
 		}
-		
+
 		console.log("\nPunto 2:\n");
-		for (let i = 0; i < array.length; i++){
+		for (let i = 0; i < array.length; i++) {
 			console.log(array[i]);
 		}
-		
+
 		console.log("\nPunto 3:\n");
-		for (let i = 0; i < array.length; i++){
-			console.log(array[i]+1);
+		for (let i = 0; i < array.length; i++) {
+			console.log(array[i] + 1);
 		}
-		
+
 		console.log("\nPunto 4:\n");
 		let array2 = [];
-		for (let i = 0; i < array.length; i++){
+		for (let i = 0; i < array.length; i++) {
 			array2[i] = array[i];
 		}
-		
+
 		console.log("\nPunto 5:\n");
 		let cont2 = 0;
-		for (let i = 0; i < array.length; i++){
+		for (let i = 0; i < array.length; i++) {
 			cont2 += array[i];
 		}
-		console.log("La media es: "+(cont2/array.length));
-		
+		console.log("La media es: " + (cont2 / array.length));
+
 	}
-	
-</script>    
+
+</script>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4.6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <p> Abre la consola </p>
+	<p> Abre la consola </p>
 
 </body>
+
 </html>
