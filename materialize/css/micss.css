@@ -1,0 +1,27 @@
+.logo img{
+    position: relative;
+    left: 2.5px;
+    height: 55px;
+    margin: 1px;
+}
+.logo span{
+    position: relative;
+    bottom: 10px;
+    left: 6px;
+}
+
+.footer-copyright a{
+    margin: 0 4px;
+    font-size: 2.3rem;
+}
+
+.carousel{
+    margin: 0;
+}
+
+.parallax-container {
+    height: 120px;
+  }
+  .parallax-container#index{
+      height: 500px;
+  }

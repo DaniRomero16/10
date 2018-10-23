@@ -4,176 +4,188 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Rooooombas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/materialize.min.css" />
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.fixed-action-btn');
-            var instances = M.FloatingActionButton.init(elems, { direction: 'top' });
-
-            elems = document.querySelectorAll('.sidenav');
-            instances = M.Sidenav.init(elems);
-
-            elems = document.querySelectorAll('.carousel');
-            instances = M.Carousel.init(elems);
-
-            elems = document.querySelectorAll('.collapsible');
-            instances = M.Collapsible.init(elems);
-        });
-
-
-        $(".dropdown-trigger").dropdown();
-    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/micss.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="fontawesome-free-5.4.1-web/css/all.min.css" />
 
 </head>
 
 <body>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col s3">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://materializecss.com/images/office.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                        <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav>
+    <div class="navbar-fixed">
         <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
+            <div class="nav-wrapper cyan darken-3">
+                <a href="index.html" class="brand-logo logo"><img class="responsive-img" src="images/logo.png"><span>Roomba</span></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">Javascript</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
+                    <li class="active"><a href="index.html"><i class="small white-text material-icons left">dashboard</i>Principal</a></li>
+                    <li><a href="about.html"><i class="small white-text material-icons left">nature_people</i>Nosotros</a></li>
+                    <li><a href="contact.html"><i class="small white-text material-icons left">contact_mail</i>Contacto</a></li>
+                    <li><a href="catalogo.html"><i class="small white-text material-icons left">shopping_basket</i>Catálogo</a></li>
+                    <li>
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn red modal-trigger" href="#modal1"><i class="left material-icons">account_box</i>Inicio Sesión</a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content black-text">
+                                <h4>Introduzca sus datos.</h4>
+                                <div class="container-fluid">
+                                    <form>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" class="validate">
+                                                <label for="last_name">Nombre de Usuario</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="pass" type="text" class="validate">
+                                                <label for="pass">Contraseña</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Log-In</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-        </ul>
 
-    </nav>
-    <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue">
-            <div class="circle-clipper left">
-                <div class="circle"></div>
-            </div>
-            <div class="gap-patch">
-                <div class="circle"></div>
-            </div>
-            <div class="circle-clipper right">
-                <div class="circle"></div>
-            </div>
-        </div>
-
-        <div class="spinner-layer spinner-red">
-            <div class="circle-clipper left">
-                <div class="circle"></div>
-            </div>
-            <div class="gap-patch">
-                <div class="circle"></div>
-            </div>
-            <div class="circle-clipper right">
-                <div class="circle"></div>
-            </div>
-        </div>
-
-        <div class="spinner-layer spinner-yellow">
-            <div class="circle-clipper left">
-                <div class="circle"></div>
-            </div>
-            <div class="gap-patch">
-                <div class="circle"></div>
-            </div>
-            <div class="circle-clipper right">
-                <div class="circle"></div>
-            </div>
-        </div>
-
-        <div class="spinner-layer spinner-green">
-            <div class="circle-clipper left">
-                <div class="circle"></div>
-            </div>
-            <div class="gap-patch">
-                <div class="circle"></div>
-            </div>
-            <div class="circle-clipper right">
-                <div class="circle"></div>
-            </div>
-        </div>
     </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li class="active"><a href="index.html">Principal</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn red modal-trigger" href="#modal2"><i class="left material-icons">account_box</i>Inicio Sesión</a>
 
-    <div class="card-panel teal lighten-4">This is a card panel with a teal lighten-2 class</div>
-
-    <ul id="dropdown2" class="dropdown-content">
-        <li><a href="#!">one<span class="badge">1</span></a></li>
-        <li><a href="#!">two<span class="new badge">1</span></a></li>
-        <li><a href="#!">three</a></li>
+                <!-- Modal Structure -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content black-text">
+                        <h4>Introduzca sus datos.</h4>
+                        <div class="container-fluid">
+                            <form>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="last_name2" type="text" class="validate">
+                                        <label for="last_name2">Nombre de Usuario</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="pass2" type="text" class="validate">
+                                        <label for="pass2">Contraseña</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Log-In</a>
+                    </div>
+                </div>
+            </li>
     </ul>
-    <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
 
-    <a class="waves-effect waves-light btn">button</a>
-    <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-    <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
-
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
-        </a>
-        <ul>
-            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-        </ul>
+    <div class="parallax-container" id="index">
+        <div class="parallax"><img src="images/parallax1.jpg"></div>
     </div>
-    <ul class="collapsible">
-            <li>
-              <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-          </ul>
+    <div class="section white z-depth-3">
 
+        <div class="container">
 
-    <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="mercedes.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="mercedes.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="mercedes.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="mercedes.jpg"></a>
-        <a class="carousel-item" href="#five!"><img src="mercedes.jpg"></a>
+            <div class="row">
+
+                <div class="col s12 m4 center">
+                    <i class="cyan-text large material-icons">assessment</i>
+                    <h3>
+                        Estadísticas
+                    </h3>
+                    <p>
+                        Duis sit amet nisi non magna tristique aliquet. Vivamus in feugiat nibh, ut gravida orci.
+                        Suspendisse aliquet turpis sagittis, sollicitudin magna sit amet, varius erat.
+                    </p>
+                </div>
+                <div class="col s12 m4 center">
+                    <i class="cyan-text large material-icons">cast_connected</i>
+                    <h3>
+                        Conectividad
+                    </h3>
+                    <p>
+                        Duis sit amet nisi non magna tristique aliquet. Vivamus in feugiat nibh, ut gravida orci.
+                        Suspendisse aliquet turpis sagittis, sollicitudin magna sit amet, varius erat.
+                    </p>
+                </div>
+                <div class="col s12 m4 center">
+                    <i class="cyan-text large material-icons">import_contacts</i>
+                    <h3>
+                        Relación
+                    </h3>
+                    <p>
+                        Duis sit amet nisi non magna tristique aliquet. Vivamus in feugiat nibh, ut gravida orci.
+                        Suspendisse aliquet turpis sagittis, sollicitudin magna sit amet, varius erat.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel">
+            <a class="carousel-item" href="#one!"><img class="circle" src="images/roomba1.jpg"></a>
+            <a class="carousel-item" href="#two!"><img class="circle" src="images/roomba2.jpg"></a>
+            <a class="carousel-item" href="#three!"><img class="circle" src="images/roomba3.jpg"></a>
+            <a class="carousel-item" href="#four!"><img class="circle" src="images/roomba4.jpg"></a>
+            <a class="carousel-item" href="#five!"><img class="circle" src="images/roomba5.jpg"></a>
+        </div>
     </div>
+    </div>
+    <div class="parallax-container" id="index">
+        <div class="parallax"><img src="images/parallax2.jpg"></div>
+    </div>
+
+
+
+    <footer class="page-footer cyan darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Roomba</h5>
+                    <p class="grey-text text-lighten-4">Lorem ipsum sit amet in the people to the street.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Enlaces</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Principal</a></li>
+                        <li><a class="grey-text text-lighten-3" href="about.html">Nosotros</a></li>
+                        <li><a class="grey-text text-lighten-3" href="contact.html">Contacto</a></li>
+                        <li><a class="grey-text text-lighten-3" href="catalogo.html">Catálogo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Codespace Academy
+                <a class="grey-text text-lighten-4 right" href="#!"><i class="fab fa-facebook-square"></i></a>
+                <a class="grey-text text-lighten-4 right" href="#!"><i class="fab fa-twitter-square"></i></a>
+                <a class="grey-text text-lighten-4 right" href="#!"><i class="fab fa-linkedin"></i></a>
+                <a class="grey-text text-lighten-4 right" href="#!"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/materialize.min.js"></script>
-
+    <script src="js/main.js"></script>
+    <script src="fontawesome-free-5.4.1-web/js/all.min.js"></script>
 
 </body>
 
