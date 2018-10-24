@@ -2,12 +2,18 @@
 <html>
 <script>
 
-    let strings = new Array ("luna", "ganimedes", "europa", "calixto", "io");
+    let miArray = new Array(20, 5, 9, 63, 28, 27);
+    let miarray2 = (miArray + 1);
+    console.log(miarray2);
+    console.log(sumarArray(miArray));
+    function sumarArray(vec) {
+        let count = 0;
+        for (num in vec) {
+            count += vec[num];
+        }
+        return count;
 
-    for (let i = 0; i < strings.length; i++) {
-        console.log(strings[i]);
     }
-
 </script>
 
 <head>

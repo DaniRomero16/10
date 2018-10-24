@@ -2,10 +2,10 @@
 <html>
 <script>
 
-	let primerArray = [];
+	let primerArray = new Array ();
 
 	for (let i = 0; i < 20; i++) {
-		primerArray[i] = getRandomInt(1, 101);
+		primerArray.push(getRandomInt(1, 101));
 	}
 	imprimirArray(primerArray);
 
