@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    let hola = new Array(5, 9, 2, 90, 67, 43, 56);
+
+    let valor = 55;
+
+    console.log(encontrar(hola, valor));
+
+    function encontrar(vec, value) {
+        let devolver = false;
+
+        vec.forEach(element => {
+            if (element == value) {
+                devolver = true;
+            }
+        });
+        return devolver;
+    }
+
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4.6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+
+</html>

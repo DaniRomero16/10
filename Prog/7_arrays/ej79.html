@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    let hi = new Array (0,1,0,1,1,1,0,0,0,1);
+
+    console.log(sortBoolean(hi));
+
+    function sortBoolean(vec) {
+
+        let aux = new Array();
+
+        vec.forEach(element => {
+            if (element == 0) {
+                aux.push(0);
+            }
+        });
+
+        vec.forEach(element => {
+            if (element == 1) {
+                aux.push(1);
+            }
+        });
+
+        return aux;
+
+    }
+
+    
+
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4.6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+
+</html>

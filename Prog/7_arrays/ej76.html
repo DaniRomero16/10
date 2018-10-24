@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    let hi = new Array(5, 9, 2, 90, 67, 43, 56);
+
+    console.log(findMaximum(hi));
+
+    function findMaximum(vec) {
+
+        let max = 0;
+
+        for (let i = 0; i < vec.length; i++) {
+            if (vec[i] > max) {
+                max = vec[i];
+            }
+        }
+
+        return max;
+
+    }
+
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio 4.6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <p> Abre la consola </p>
+
+</body>
+
+</html>
