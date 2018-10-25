@@ -2,48 +2,127 @@
 <html>
 <script>
 
-    let hi = new Array (8,1,3,5,9,0,4);
+    let hi = new Array(8, 1, 3, 5, 9, 0, 4);
 
+    console.log("Mine: ");
+    console.log(hi);
     console.log(sortArray(hi));
+
+
+    console.log("\nSelection: ");
+    console.log(hi);
+    console.log(selection(hi));
+
+
+    console.log("\nBubble: ");
+    console.log(hi);
+    console.log(bubble(hi));
+
+    console.log("\nOriginal After all: ");
+    console.log(hi);
 
     function sortArray(vec) {
 
+        let max;
+        let aux2 = new Array();
+
         let aux = new Array();
-        
-        let pushed =0 ;
-        
+
+        vec.forEach(element => {
+            aux.push(element);
+        });
+
         do {
-            let mayor = 10;
-            vec.forEach(element => {
-                if (element >= pushed && element < mayor) {
-                    mayor = element;
-                }
-            });
-            aux.push(mayor);
-            pushed = mayor;
+            max = findMaximum(aux);
+            aux2.push(max);
+            aux.splice(aux.indexOf(max), 1);
 
-        } while (aux.length != vec.length);
+        } while (aux2.length != vec.length);
 
-        invert(aux);
+        return invert(aux2);
 
+    }
+
+    function invert(vec) {
+
+        let aux = new Array();
+
+        for (let i = (vec.length - 1); i >= 0; i--) {
+            aux.push(vec[i]);
+        }
 
         return aux;
 
     }
 
-function invert(vec) {
+    function findMaximum(vec) {
 
-let aux = new Array() ;
+        let max = 0;
 
-for (let i = (vec.length - 1); i >= 0; i--) {
-    aux.push(vec[i]);
-}
+        for (let i = 0; i < vec.length; i++) {
+            if (vec[i] > max) {
+                max = vec[i];
+            }
+        }
 
-return aux;
+        return max;
+    }
 
-}
+    function selection(vec) {
+        let aux, index_min ;
 
-    
+        let auxArray = new Array();
+
+        vec.forEach(element => {
+            auxArray.push(element);
+        });
+
+        for (let j = 0; j < vec.length - 1; j++) {
+            
+            index_min = j;
+            
+            for (let i = j + 1; i < vec.length; i++) {
+                
+                if (auxArray[i] < auxArray[index_min]) {
+                    
+                    index_min = i;
+                
+                }
+            
+            }
+            
+            aux = auxArray[j];
+            auxArray[j] = auxArray[index_min];
+            auxArray[index_min] = aux;
+        }
+        
+        return auxArray;
+    }//end selection method.
+
+    function bubble(vec) {
+        let aux ;
+
+        let auxArray = new Array();
+
+        vec.forEach(element => {
+            auxArray.push(element);
+        });
+
+        for (let i = 0; i < vec.length - 1; i++) {
+            
+            for (let j = 0; j < (vec.length - 1 - i); j++) {
+               
+                if (auxArray[j] > auxArray[j + 1]) {
+                    
+                    aux = auxArray[j];
+                    auxArray[j] = auxArray[j + 1];
+                    auxArray[j + 1] = aux;
+                }
+            }
+        }
+        
+        return auxArray;
+    }//end bubble method. 
 
 </script>
 

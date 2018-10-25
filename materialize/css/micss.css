@@ -25,3 +25,7 @@
   .parallax-container#index{
       height: 500px;
   }
+
+  .materialboxed{
+     margin: 10px;
+  }

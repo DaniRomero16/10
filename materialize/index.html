@@ -22,11 +22,12 @@
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a href="index.html"><i class="small white-text material-icons left">dashboard</i>Principal</a></li>
                     <li><a href="about.html"><i class="small white-text material-icons left">nature_people</i>Nosotros</a></li>
-                    <li><a href="contact.html"><i class="small white-text material-icons left">contact_mail</i>Contacto</a></li>
+                    <li><a href="contact.html"><i class="small white-text material-icons left">photo_library</i>Galería</a></li>
                     <li><a href="catalogo.html"><i class="small white-text material-icons left">shopping_basket</i>Catálogo</a></li>
                     <li>
                         <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light btn red modal-trigger" href="#modal1"><i class="left material-icons">account_box</i>Inicio Sesión</a>
+                        <a class="waves-effect waves-light btn red modal-trigger" href="#modal1"><i class="left material-icons">account_box</i>Inicio
+                            Sesión</a>
 
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal">
@@ -50,6 +51,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
+                                <a href="register.html" class="modal-close waves-effect waves-green btn-flat"> Sign in</a>
                                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Log-In</a>
                             </div>
                         </div>
@@ -63,38 +65,40 @@
     <ul class="sidenav" id="mobile-demo">
         <li class="active"><a href="index.html">Principal</a></li>
         <li><a href="about.html">Nosotros</a></li>
-        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="contact.html">Galería</a></li>
         <li><a href="catalogo.html">Catálogo</a></li>
         <li>
-                <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn red modal-trigger" href="#modal2"><i class="left material-icons">account_box</i>Inicio Sesión</a>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn red modal-trigger" href="#modal2"><i class="left material-icons">account_box</i>Inicio
+                Sesión</a>
 
-                <!-- Modal Structure -->
-                <div id="modal2" class="modal">
-                    <div class="modal-content black-text">
-                        <h4>Introduzca sus datos.</h4>
-                        <div class="container-fluid">
-                            <form>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="last_name2" type="text" class="validate">
-                                        <label for="last_name2">Nombre de Usuario</label>
-                                    </div>
+            <!-- Modal Structure -->
+            <div id="modal2" class="modal">
+                <div class="modal-content black-text">
+                    <h4>Introduzca sus datos.</h4>
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="last_name2" type="text" class="validate">
+                                    <label for="last_name2">Nombre de Usuario</label>
                                 </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="pass2" type="text" class="validate">
-                                        <label for="pass2">Contraseña</label>
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="pass2" type="text" class="validate">
+                                    <label for="pass2">Contraseña</label>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Log-In</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </li>
+                <div class="modal-footer">
+                    <a href="register.html" class="modal-close waves-effect waves-green btn-flat"> Sign in</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Log-In</a>
+                </div>
+            </div>
+        </li>
     </ul>
 
     <div class="parallax-container" id="index">
@@ -145,7 +149,6 @@
             <a class="carousel-item" href="#four!"><img class="circle" src="images/roomba4.jpg"></a>
             <a class="carousel-item" href="#five!"><img class="circle" src="images/roomba5.jpg"></a>
         </div>
-    </div>
     </div>
     <div class="parallax-container" id="index">
         <div class="parallax"><img src="images/parallax2.jpg"></div>
