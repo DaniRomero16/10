@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+    function telepizza(email, callback) {
+        var data = {
+            email: email //Aquí va tu email
+        }
+        var url = 'https://d6ow8diqzony0.cloudfront.net/check-prize'; //Conecta con cloudfront para validar el premio. Esto es lo más importante
+        $.ajax({
+            type: "POST",
+            url: url,
+            dataType: 'json',
+            contentType: "application/json",
+            crossDomain: true,
+            data: JSON.stringify(data),
+            success: function (result) {
+                console.log(result);
+                var body = JSON.stringify(JSON.parse(result['body']));
+                var response = JSON.parse(body);
+                switch (response.responseMessage) {
+                    case 'USER_IS_WINNER':
+                        // window.location.href = "ganador.html" //Esto está comentado para que no te redireccione
+                        callback(true); //Si eres ganador, devuelve true
+                        break;
+                    case 'USER_NOT_WIN':
+                        // window.location.href = "no-ganador.html" //Comentado para que no te redireccione en caso de no ser ganador.
+                        callback(false); //Devuelve falso
+                        break;
+                    default:
+                        console.log("¡UpsLoimos pero este email no es valido, está repetido o ha sido mal introducido.¡INTENTALO DE NUEVO!");
+                        callback(false)
+                        break;
+                }
+            },
+            error: function (e) {
+                console.log("ERRORssage");
+            }
+        });
+
+    }
+
+    function validateMail(email, callback) { //Función que valida el email
+        console.log('######################'); //Esto es más bien inútil, saca por la consola todo eso.
+        var data = { //Aquí van tus datos, tu email, y si quieres recibir emails de publicidad
+            email: email,
+            receive_offert: true //Esto debería estar en falso para no recibir promos, pero dado que es un email temporal, da igual.
+        }
+        console.log(data); // Saca por la consola tus datos (lo de arriba)
+        var url = 'https://d6ow8diqzony0.cloudfront.net/check-mail'; //Conecta con cloudfront para validar el email. Es el mismo enlace que en la página oficial
+        $.ajax({
+            type: "POST",
+            url: url,
+            dataType: 'json',
+            contentType: "application/json",
+            crossDomain: true,
+            data: JSON.stringify(data),
+            success: function (result) {
+                // console.log(result);
+                var body = JSON.stringify(JSON.parse(result['body']));
+                var response = JSON.parse(body);
+                // console.log(response.responseMessage);
+                switch (response.responseMessage) { //Estos son todos los casos que puede devolver el servidor
+                    case 'EMAIL_SAVED':
+                        // $('#modal-participar').fadeIn();
+                        break;
+                    case 'DYNAMO_ERR':
+                        console.log("¡UpsHarido un error interno, por favor, vuelve a intentarlo.");
+                        break;
+                    case 'USER_HAS_PARTICIPED':
+                        console.log("¡UpsElrio ya ha participado en el concurso.");
+                        break;
+                    case 'FORBIDDEN':
+                        console.log("¡UpsEstaa alcanzado el número máximo de peticiones. Por favor, vuelve a intentarlo transcurridos 30 minutos.");
+                        break;
+                    default:
+                        console.log("¡UpsLoimos pero este email no es valido, está vacío, está repetido o ha sido mal introducido.¡INTENTALO DE NUEVO!");
+                        break;
+                }
+
+                callback(response.responseMessage) //Devuelve el mensaje del servidor
+            },
+            error: function (e) {
+                console.log("ERRORssage");
+            }
+        });
+    }
+
+    var intents_tramp = 0;
+    function execute() {
+        var mail = $('#mail').val();
+
+        validateMail(mail, function (response) { //Ejecuta la función validateMail()
+            console.log('Numerointento' + intents_tramp++); //Saca por la consola el número de intento
+            if (response == 'EMAIL_SAVED') { //Si la respuesta del servidor es EMAIL_SAVED, se ejecuta lo siguiente
+                telepizza(mail, function (winner) {
+                    if (winner) { //Si la variable winner es "true" sale un mensaje emergente que te dice que has ganado.
+                        alert('GANADOR !!! PIZZA GRATIS');
+                    } else { //En caso contrario, llama a la función repeat()
+                        repeat();
+                    }
+                });
+            } else {
+                repeat(); //Si el email no es aceptado, llama a la función repeat()
+            }
+        });
+    }
+
+    function repeat() {
+        $('#click-to-delete').click();
+        setTimeout(function () {
+            execute();
+        }, 5000);
+    }
+
+
+    execute(); //Ejecuta la función execute();
+
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <p>  </p>
+
+</body>
+
+</html>

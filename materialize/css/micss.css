@@ -29,3 +29,12 @@
   .materialboxed{
      margin: 10px;
   }
+
+  .card img{
+      filter:  grayscale(100%);
+      transition-duration: 1s;
+  }
+
+  .card:hover img{
+    filter:  grayscale(0%);
+}

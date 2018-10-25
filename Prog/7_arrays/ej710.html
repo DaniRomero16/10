@@ -2,29 +2,43 @@
 <html>
 <script>
 
-    let hi = new Array(8, 1, 3, 5, 9, 0, 4);
+    let hi = new Array(1, 2, 3, 5, 3, 6, 7); //Array Original
 
     console.log("Mine: ");
     console.log(hi);
+
+    let t0 = performance.now();
     console.log(sortArray(hi));
+    let t1 = performance.now();
+    console.log("Call to MY ALGORITHM took " + (t1 - t0) + " milliseconds.");
 
 
     console.log("\nSelection: ");
     console.log(hi);
+    
+    t0 = performance.now();
     console.log(selection(hi));
+    t1 = performance.now();
+    console.log("Call to SELECTION took " + (t1 - t0) + " milliseconds.");
 
 
     console.log("\nBubble: ");
     console.log(hi);
+    
+    t0 = performance.now();
     console.log(bubble(hi));
+    t1 = performance.now();
+    console.log("Call to BUBBLE took " + (t1 - t0) + " milliseconds.");
 
     console.log("\nOriginal After all: ");
     console.log(hi);
 
+    //My shitty algorithm.
+
     function sortArray(vec) {
 
         let max;
-        let aux2 = new Array();
+        let final = new Array();
 
         let aux = new Array();
 
@@ -34,14 +48,16 @@
 
         do {
             max = findMaximum(aux);
-            aux2.push(max);
+            final.push(max);
             aux.splice(aux.indexOf(max), 1);
 
-        } while (aux2.length != vec.length);
+        } while (final.length != vec.length);
 
-        return invert(aux2);
+        return invert(final);
 
     }
+
+    //Function to invert the array.
 
     function invert(vec) {
 
@@ -54,6 +70,8 @@
         return aux;
 
     }
+
+    //Function to get the Maximum Value out of an integer Array.
 
     function findMaximum(vec) {
 
@@ -68,13 +86,15 @@
         return max;
     }
 
+    //Selection sorting algorithm.
+
     function selection(vec) {
         let aux, index_min ;
 
-        let auxArray = new Array();
+        let final = new Array();
 
         vec.forEach(element => {
-            auxArray.push(element);
+            final.push(element);
         });
 
         for (let j = 0; j < vec.length - 1; j++) {
@@ -83,7 +103,7 @@
             
             for (let i = j + 1; i < vec.length; i++) {
                 
-                if (auxArray[i] < auxArray[index_min]) {
+                if (final[i] < final[index_min]) {
                     
                     index_min = i;
                 
@@ -91,37 +111,39 @@
             
             }
             
-            aux = auxArray[j];
-            auxArray[j] = auxArray[index_min];
-            auxArray[index_min] = aux;
+            aux = final[j];
+            final[j] = final[index_min];
+            final[index_min] = aux;
         }
         
-        return auxArray;
+        return final;
     }//end selection method.
+
+    //Bubble sorting algorithm.
 
     function bubble(vec) {
         let aux ;
 
-        let auxArray = new Array();
+        let final = new Array();
 
         vec.forEach(element => {
-            auxArray.push(element);
+            final.push(element);
         });
 
         for (let i = 0; i < vec.length - 1; i++) {
             
             for (let j = 0; j < (vec.length - 1 - i); j++) {
                
-                if (auxArray[j] > auxArray[j + 1]) {
+                if (final[j] > final[j + 1]) {
                     
-                    aux = auxArray[j];
-                    auxArray[j] = auxArray[j + 1];
-                    auxArray[j + 1] = aux;
+                    aux = final[j];
+                    final[j] = final[j + 1];
+                    final[j + 1] = aux;
                 }
             }
         }
         
-        return auxArray;
+        return final;
     }//end bubble method. 
 
 </script>
@@ -129,7 +151,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
+    <title>Ejercicio 7.10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
