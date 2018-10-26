@@ -2,13 +2,13 @@
 <html>
 <script>
 
-    let hi = new Array(5, 9, 2, 90, 67, 43, 56);
+    let hi = new Array(5, 9, 2, -90, 67, 43, 56);
 
     console.log(findMaximum(hi));
 
     function findMaximum(vec) {
 
-        let max = 0;
+        let max = vec[0];
 
         for (let i = 0; i < vec.length; i++) {
             if (vec[i] > max) {

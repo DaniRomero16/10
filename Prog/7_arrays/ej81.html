@@ -4,18 +4,18 @@
 
     let hola = new Array(5, 9, 2, 90, 67, 43, 56);
 
+    let valor = 67;
 
-    console.log(tamanio(hola));
+    console.log(encontrarValor(hola, valor));
 
-    function tamanio(vec) {
-
-        let i=0;
-        while(vec[i]!=undefined){
-            i++;
-        
+    function encontrarValor(array,valor){
+        let encontrado= false;
+        for (i=0;i<array1.length && encontrado==false;i++){
+            if (array1[i]==valor){
+                encontrado=true;
+            }
         }
-        
-        return i;
+            return encontrado;
     }
 
 </script>
