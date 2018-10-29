@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    let array1 = new Array(81, 1, 13, 80, 3, 10, 7, 20, 7, 10);
+
+    console.log(pivote(array1));
+
+
+    function pivote(array) {
+        let pequeno = new Array(); let grande = new Array();
+        if (array.length <= 1)
+            return array;
+
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] < array[0])
+                pequeno.push(array[i]);
+            if (array[i] >= array[0])
+                grande.push(array[i]);
+        }
+        return pivote(pequeno).concat(array[0], pivote(grande));
+    }
+
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

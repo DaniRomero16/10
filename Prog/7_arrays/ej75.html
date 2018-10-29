@@ -7,7 +7,7 @@
     let aux = new Array();
 
     hi.forEach(element => {
-        aux.push(element);
+        aux[hi.indexOf(element)] = element;
     });
 
     console.log(aux);

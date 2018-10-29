@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    let notas = new Array();
+    let nombres = new Array();
+
+    do {
+
+        let toPush = prompt("Introduce nota: ");
+
+        if (toPush < 0 || toPush > 10 || isNaN(toPush)) {
+            console.log("Eres monguer prueba otra vez.")
+        } else {
+            notas.push(toPush);
+        }
+
+    } while (notas.length < 10);
+
+    do {
+
+        let toPush = prompt("Introduce nombres: ");
+
+        if (isNaN(toPush)) {
+            nombres.push(toPush);
+        } else {
+            console.log("Eres monguer prueba otra vez.")
+        }
+
+    } while (nombres.length < 10);
+
+    let calificacion;
+
+    nombres.forEach(element => {
+        if (notas[nombres.indexOf(element)] < 5) {
+            calificacion = "Suspenso";
+        }
+        else if (notas[nombres.indexOf(element)] < 7) {
+            calificacion = "Bien";
+        }
+        else if (notas[nombres.indexOf(element)] < 9) {
+            calificacion = "Notable";
+        }
+        else if (notas[nombres.indexOf(element)] < 11) {
+            calificacion = "Sobresaliente";
+        }
+
+        console.log(element + " tiene un " + notas[nombres.indexOf(element)] + " que es igual a " + calificacion);
+
+
+    });
+
+
+
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

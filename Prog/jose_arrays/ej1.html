@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    let avion = new Array ("Julián Casado", "Alberto Muñoz", "Marta Fernández", "Carlos Pérez", "Luis Suárez");
+
+    agregar("Pedro Rodríguez");
+    eliminarBien("Marta Fernández");
+
+    let info = {
+        "Tetuán" : 12,
+        "Moncloa" : 19,
+        "Hortaleza" : 21,
+    }
+
+    avion.forEach(element => {
+        console.log(element + ": " + (avion.indexOf(element)+1));
+    });
+
+    avisoDesvio(2, "Tetuán");
+
+    function agregar(element) {
+        
+        avion.push(element);
+
+    }
+
+    function eliminar(element) {
+        
+        avion.splice(avion.indexOf(element),1);
+
+    }
+
+    function eliminarBien(element) {
+        
+        avion [avion.indexOf(element)] = null;
+
+    }
+
+    function avisoDesvio(numBillete, estacion) {
+        
+        console.log("\nSr/a. " + avion[numBillete-1] + ".");
+        console.log("Muchas gracias por adquirir este ticket gratuito en el " + estacion + " express.");
+        console.log("El tiempo estimado de llegada es de " + info[estacion] + " minutos." );
+        console.log("Estamos trabajando en la mejora de nuestra vía principal, disculpe las molestias!\n");
+
+    }
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

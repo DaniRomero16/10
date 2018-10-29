@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    let array = new Array();
+    let numJugadores = prompt("Escribe el número de jugadores...");
+    let valor = 0;
+    let mayor = new Array();
+
+    for (let i = 0; i < numJugadores; i++) {
+        array[i] = new Array();
+        for (let j = 0; j < 4; j++) {
+            valor = prompt("Jugador" + (i + 1) + "numero" + (j + 1));
+            while (valor < 0 || valor > 10 || valor == "") {
+                valor = prompt("el valor no es correcto");
+            }
+            array[i][j] = valor;
+        }
+    }
+
+    for (let i = 0; i < numJugadores; i++) {
+        console.log(array[i]);
+    }
+    let num1 = prompt("Arbitro1");
+    let num2 = prompt("Arbitro2");
+
+    for (let i = 0; i < array.length; i++) {
+
+        mayor[i] = compruebaNumeros(array[i], num1, num2);
+
+    }
+
+    console.log("El ganador es el jugador: " + (findMaximum(mayor) + 1));
+
+
+    function compruebaNumeros(array, nu1, nu2) {
+        let cont = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] >= nu1 && array[i] <= nu2) {
+                cont++;
+            }
+        }
+        return cont;
+    }
+
+    function findMaximum(vec) {
+
+        let max = vec[0];
+
+        for (let i = 0; i < vec.length; i++) {
+            if (vec[i] > max) {
+                max = vec[i];
+            }
+        }
+
+        return vec.indexOf(max);
+    }
+
+
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

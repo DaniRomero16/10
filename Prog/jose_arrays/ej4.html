@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    let array = [
+        ["1", "2", "3", "4", "5" ],
+        ["6", "7", "8", "9", "10"],
+        ["11", "12", "13", "14", "15"]
+    ];
+
+    let toPrint = "";
+
+    for (let i = 0; i < array.length / 2; i++) {
+        if (i == (parseInt(array.length / 2))) {
+            for (let j = 0; j < array[i].length / 2; j++) {
+
+                if (j == (parseInt(array[i].length / 2))) {
+                    toPrint += array[i][j];
+                } else {
+                    toPrint += array[i][j];
+                    toPrint += ", ";
+                    toPrint += array[(array.length) - (i + 1)][(array[i].length) - (j + 1)];
+                    toPrint += ", ";
+                }
+
+            }
+        } else {
+
+            for (let j = 0; j < array[i].length; j++) {
+
+                toPrint += array[i][j];
+                toPrint += ", ";
+                toPrint += array[(array.length) - (i + 1)][(array[i].length) - (j + 1)];
+                toPrint += ", ";
+
+            }
+        }
+
+    }
+
+    console.log(toPrint);
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
