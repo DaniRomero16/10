@@ -4,8 +4,8 @@
 
     let avion = new Array ("Julián Casado", "Alberto Muñoz", "Marta Fernández", "Carlos Pérez", "Luis Suárez");
 
-    agregar("Pedro Rodríguez");
-    eliminarBien("Marta Fernández");
+    agregar("Pedro Rodríguez", avion);
+    eliminarBien("Marta Fernández", avion);
 
     let info = {
         "Tetuán" : 12,
@@ -17,31 +17,31 @@
         console.log(element + ": " + (avion.indexOf(element)+1));
     });
 
-    avisoDesvio(2, "Tetuán");
+    avisoDesvio(2, "Tetuán", avion, info);
 
-    function agregar(element) {
+    function agregar(element, avion2) {
         
         avion.push(element);
 
     }
 
-    function eliminar(element) {
+    function eliminar(element, avion2) {
         
         avion.splice(avion.indexOf(element),1);
 
     }
 
-    function eliminarBien(element) {
+    function eliminarBien(element, avion2) {
         
         avion [avion.indexOf(element)] = null;
 
     }
 
-    function avisoDesvio(numBillete, estacion) {
+    function avisoDesvio(numBillete, estacion, avion2, destinos) {
         
-        console.log("\nSr/a. " + avion[numBillete-1] + ".");
+        console.log("\nSr/a. " + avion2[numBillete-1] + ".");
         console.log("Muchas gracias por adquirir este ticket gratuito en el " + estacion + " express.");
-        console.log("El tiempo estimado de llegada es de " + info[estacion] + " minutos." );
+        console.log("El tiempo estimado de llegada es de " + destinos[estacion] + " minutos." );
         console.log("Estamos trabajando en la mejora de nuestra vía principal, disculpe las molestias!\n");
 
     }

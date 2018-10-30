@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <script>
 
-    let hola = new Array(5, 9, 2, 90, 67, 43, 56);
+    let array1 = new Array(81, 1, 13, 80, 3, 10, 7, 20, 7, 10);
 
-    let valor = 67;
+    array1 = pivote(array1);
 
-    console.log(encontrarValor(hola, valor));
+    console.log(array1);
 
-    function encontrarValor(array,valor){
-        let encontrado= false;
-        for (i=0;i<array1.length && encontrado==false;i++){
-            if (array1[i]==valor){
-                encontrado=true;
-            }
-        }
-            return encontrado;
+    function name(params) {
+        
     }
+
+    function pivote(array) {
+        let pequeno = new Array(); let grande = new Array();
+        if (array.length <= 1)
+            return array;
+
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] < array[0])
+                pequeno.push(array[i]);
+            if (array[i] >= array[0])
+                grande.push(array[i]);
+        }
+        return pivote(pequeno).concat(array[0], pivote(grande));
+    }
+
 
 </script>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ejercicio 4.6</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 
 <body>
-
-    <p> Abre la consola </p>
 
 </body>
 

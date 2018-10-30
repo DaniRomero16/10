@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    let jugador1 = prompt("Nombre jugador 1:...");
+    let jugador2 = prompt("Nombre jugador 2:...");
+
+    let puntos1 = 0;
+    let puntos2 = 0;
+
+    for (let i = 0; puntos1 < 3 && puntos2 < 3; i++) {
+        if (i % 2 == 0) {
+            if (ahorcado(jugador2, jugador1) == jugador1) {
+                puntos1++;
+                imprimirPuntos(puntos1, jugador1, puntos2, jugador2);
+                i--;
+            } else {
+                puntos2++;
+                imprimirPuntos(puntos1, jugador1, puntos2, jugador2);
+            }
+
+        } else {
+            if (ahorcado(jugador1, jugador2) == jugador2) {
+                puntos2++;
+                imprimirPuntos(puntos1, jugador1, puntos2, jugador2);
+                i--;
+            } else {
+                puntos1++;
+                imprimirPuntos(puntos1, jugador1, puntos2, jugador2);
+            }
+        }
+
+    }
+
+    if (puntos1 == 3) {
+        console.log("EL GANADOR ES: " + jugador1);
+    } else {
+        console.log("EL GANADOR ES: " + jugador2);
+    }
+
+
+    function ahorcado(guesser, player) {
+        let toGuess = prompt(player + ", introduce palabra secreta:...");
+        toGuess = toGuess.toLowerCase();
+        let clue = prompt(player + ", introduce una pista:...");
+        let trying = "";
+        let winner;
+        for (let i = 0; i < 6; i++) {
+
+            trying = prompt(guesser + " Intentos restantes: " + (6 - i));
+            trying = trying.toLowerCase();
+            if (trying == toGuess) {
+                console.log("ACERTADO!!" + " LA PALABRA SECRETA ES: " + toGuess);
+                console.log(guesser + " GANA!!");
+                winner = guesser;
+                return winner;
+            } else {
+                console.log("\nNO ES " + trying + ", una pista: " + clue);
+                imprimirPuntos(puntos1, jugador1, puntos2, jugador2);
+            }
+
+        }
+        winner = player;
+        console.log(player + " GANA!!");
+        return player;
+    }
+
+
+    function imprimirPuntos(puntos1p, jugador1p, puntos2p, jugador2p) {
+        console.log("\nPuntuación: ");
+        console.log(jugador1p + ": " + puntos1p);
+        console.log(jugador2p + ": " + puntos2p + "\n");
+    }
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
