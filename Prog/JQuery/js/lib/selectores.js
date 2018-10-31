@@ -7,14 +7,4 @@ $(function () {
     rojo.css("background-color", "red");
     verde.css("color", "yellow");
     amarillo.css("font-size", "30px");
-
 })
-
-
-function Bici() {
-    this.ruedas = 2;
-
-    Bici.prototype.quitarRuedas = function () {
-        this.ruedas = 0;
-    }
-}
