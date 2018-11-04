@@ -26,5 +26,9 @@ function Song(titulo, grupo, duracion, valoracion) {
         return this.duracion;
     }
 
+    Song.prototype.getArtista = function(){
+        return this.grupo;
+    }
+
 
 }

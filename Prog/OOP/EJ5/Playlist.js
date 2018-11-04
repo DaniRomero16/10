@@ -34,25 +34,58 @@ function Playlist(songs) {
     }
 
     Playlist.prototype.top = function () {
+        let artistas = new Array();
+        let artistas2 = {};
+        let top = new Array();
+        let aux = new Array();
+        let aux2 = new Array();
 
-    }
-    Playlist.prototype.getPlay = function () {
         this.songs.forEach(element => {
-            console.log(element);
+            aux.push(element);
+            aux2.push(element);
         });
+
+        aux.forEach(element => {
+            aux2.forEach(element2 => {
+                if (element.getArtista() == element2.getArtista()) {
+                    artistas.push(element.getArtista());
+                    aux2.splice(aux2.indexOf(element2), 1);
+                }
+            });
+        });
+
+        artistas.forEach(element => {
+            artistas2[element] = 0;
+        });
+        artistas.forEach(element => {
+            artistas2[element]++;
+        });
+        
+        for (let i = 0; i < 5; i++) {
+            let mayor = 0;
+            for (grupo in artistas2) {
+                if (artistas2[grupo] > mayor) {
+                    mayor = artistas2[grupo];
+                }
+            }
+            for (grupo in artistas2) {
+                if (artistas2[grupo] == mayor && top.length < 5) {
+                    top.push(grupo);
+                    delete artistas2[grupo];
+                }
+            }
+
+        }
+
+
+        return top;
     }
 
     Playlist.prototype.orderByDuration = function () {
-        this.songs = this.songs.sort(comparar);
+        return this.songs.sort(function (a, b) {
+            return b.getDuracion() - a.getDuracion();
+        });
     }
 
-    function comparar (a, b) {
-        if (a.getDuracion() < b.getDuracion()){
-            return 1;
-        }
-        if (a.getDuracion() > b.getDuracion()){
-            return -1;
-        }
-        return 0;
-    }
+
 }
