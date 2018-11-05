@@ -22,14 +22,14 @@ function Pelicula(nombre, director, estreno, type) {
     }
 
     Pelicula.prototype.setPrestado=function(){
-        return this.prestado=true;
+         this.prestado=true;
     }
     Pelicula.prototype.getTitulo=function(){
         return this.nombre;
     }
 
     Pelicula.prototype.setYear=function(year){
-        return this.estreno=year;
+        this.estreno=year;
     }
     Pelicula.prototype.getPelicula=function(){
         return ("Nombre: " +  this.nombre + " Director: " + this.director + " Estreno: " + this.estreno + " Genero" + this.type + " Prestada: "+ this.prestado);

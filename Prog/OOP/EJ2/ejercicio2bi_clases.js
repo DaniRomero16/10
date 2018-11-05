@@ -8,16 +8,12 @@ function Biblioteca() {
     this.biblioteca.push(new Libro("Suzanne Collins", "Mockingjay: The Final Book of The Hunger Games"));
 
     Biblioteca.prototype.getBiblioteca = function () {
-
         return this.biblioteca;
-
     }
 
 
     Biblioteca.prototype.setLibro = function (nombre,titulo) {
-
-        return this.biblioteca.push(new Libro(nombre, titulo));;
-
+        return this.biblioteca.push(new Libro(nombre, titulo));
     }
 
 }

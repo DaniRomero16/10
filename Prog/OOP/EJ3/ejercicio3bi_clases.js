@@ -23,8 +23,9 @@ function Videoteca() {
                 numPeli = i;
             }
         }
-        return this.videoteca[numPeli].setYear(year);
+         this.videoteca[numPeli].setYear(year);
     }
+    
 
     Videoteca.prototype.getVideoteca = function () {
         return this.videoteca;
@@ -41,7 +42,7 @@ function Videoteca() {
                 numPeli = i;
             }
         }
-        return this.videoteca[numPeli].setPrestado();
+        this.videoteca[numPeli].setPrestado();
     }
 
     Videoteca.prototype.getPelicula=function(titulo){
