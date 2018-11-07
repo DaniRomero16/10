@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" charset="UTF-8" src="usuario.js"></script>
+<script type="text/javascript" charset="UTF-8" src="ejecucion.js"></script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+
+    <div id="formulario">
+        <form>
+            <br>
+            <h3 align="center">Rellene los siguientes campos</h3><br>
+            <fieldset>
+                <legend>
+                    Datos personales
+                </legend>
+                <input type="text" name="nombre" placeholder="Nombre" style="margin-bottom: 8px;margin-top:10px"
+                    required><br>
+                <input type="text" name="apellidos" placeholder="Apellidos" required>
+            </fieldset><br>
+            <fieldset>
+                <legend>Datos</legend>
+                Sexo:
+                <input type="radio" name="sexo" id="hombre" value="hombre">
+                <label for="hombre">Hombre</label>
+                <input type="radio" name="sexo" id="mujer" value="mujer">
+                <label for="mujer">Mujer</label>
+                <br><br>
+                <input type="text" name="edad" placeholder="Edad" size="3">
+            </fieldset><br>
+            
+            <fieldset>
+                <legend>
+                    ¿Vives con Mascotas?
+                </legend>
+                <input type="checkbox" name="mascota1" id="mascota1" value="perro">
+                <label for="mascota1">Perro</label>
+                <input type="checkbox" name="mascota2" id="mascota2" value="gato">
+                <label for="mascota2">Gato</label>
+                <input type="checkbox" name="mascota3" id="mascota3" value="loro">
+                <label for="mascota3">Loro</label>
+            </fieldset><br>
+
+            <input type="button" value="Enviar" onclick="crearUsuario();">
+            <input type="reset" value="Restablecer">
+
+        </form>
+    </div>
+    <div id="usuarios">
+        
+    </div>
+
+</body>
+
+</html>

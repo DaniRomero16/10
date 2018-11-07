@@ -1,0 +1,11 @@
+#formulario{
+    float:left;
+    width: 50%;
+}
+
+#usuarios{
+    width: 35%;
+    float: right;
+    margin-right: 2%;
+    margin-top: 50px
+}
