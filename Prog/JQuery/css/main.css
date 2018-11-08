@@ -15,3 +15,71 @@
 .azul{
     color:blue;
 }
+
+#caja {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+img{
+    width: 25%;
+}
+.row{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.row div{
+    height: 150px;
+    font-size: 6rem;
+    text-align: center;
+    margin: 0;
+}
+
+#topleft{
+    border-right: 3.5px solid black;
+    border-bottom: 3.5px solid black;
+}
+
+#topcenter{
+    border-right: 3.5px solid black;
+    border-bottom: 3.5px solid black;
+    border-left: 3.5px solid black;
+}
+
+#topright{
+    border-bottom: 3.5px solid black;
+    border-left: 3.5px solid black;
+}
+
+#midleft{
+    border-right: 3.5px solid black;
+    border-bottom: 3.5px solid black;
+    border-top: 3.5px solid black;
+}
+#midcenter{
+    border-right: 3.5px solid black;
+    border-bottom: 3.5px solid black;
+    border-left: 3.5px solid black;
+    border-top: 3.5px solid black;
+}
+#midright{
+    border-bottom: 3.5px solid black;
+    border-left: 3.5px solid black;
+    border-top: 3.5px solid black;
+}
+#botleft{
+    border-right: 3.5px solid black;
+    border-top: 3.5px solid black;
+}
+#botcenter{
+    border-right: 3.5px solid black;
+    border-left: 3.5px solid black;
+    border-top: 3.5px solid black;
+}
+#botright{
+    border-left: 3.5px solid black;
+    border-top: 3.5px solid black;
+}
+

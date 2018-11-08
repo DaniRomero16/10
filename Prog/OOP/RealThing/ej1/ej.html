@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Dados</title>
+    <script type="text/javascript" charset="UTF-8" src="ej.js"></script>
+    
+
+
+    <style type="text/css">
+        .buttonDice {
+            color: white;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .sizeImage {
+            width: 500px;
+            height: 500px;
+        }
+
+        .allCenter {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body onload="hola();">
+    <div id="pepe" class="allCenter">
+        <img class="sizeImage">
+        <table border=1>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Do</td>
+                <td>Re</td>
+                <td>Mi</td>
+            </tr>
+        </table>
+    </div>
+    <center>
+        <button class="buttonDice" value="Roll the dice!" onclick="throwDice();">Throw dice</button>
+    </center>
+    
+</body>
+
+
+</html>

@@ -1,3 +1,5 @@
+var usuarios = new Array();
+
 function crearUsuario() {
     let nombre = document.getElementsByName("nombre")[0].value;
     let apellidos = document.getElementsByName("apellidos")[0].value;
@@ -10,7 +12,6 @@ function crearUsuario() {
 
     let edad = document.getElementsByName("edad")[0].value;
 
-    console.log(document.getElementById("mascota1").checked);
     let mascotas = new Array();
     if (document.getElementById("mascota1").checked)
         mascotas.push("Perro");
@@ -21,6 +22,6 @@ function crearUsuario() {
     if (document.getElementById("mascota3").checked)
         mascotas.push("Loro");
 
-    new Usuario(nombre, apellidos, sexo, edad, mascotas);
-
+    usuarios.push(new Usuario(nombre, apellidos, sexo, edad, mascotas));
+    console.log(usuarios)
 }

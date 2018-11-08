@@ -1,4 +1,7 @@
 function Usuario(nombre, apellidos, sexo, edad, mascotas) {
+
+        this.ide = getRandomInt(0,999999);
+
     if (nombre)
         this.nombre = nombre;
 
@@ -16,7 +19,7 @@ function Usuario(nombre, apellidos, sexo, edad, mascotas) {
 
     let fieldsetU = document.createElement("fieldset");
     let leyenda = document.createElement("legend");
-    leyenda.innerHTML = "Usuario";
+    leyenda.innerHTML = "Usuario " + this.ide;
     let parr1 = document.createElement("p");
     let parr2 = document.createElement("p");
     let parr3 = document.createElement("p");
