@@ -1,6 +1,7 @@
 function Playlist(songs) {
 
     this.songs = new Array();
+    this.playing = -1;
 
     if (songs) {
         this.songs = songs;
@@ -23,14 +24,15 @@ function Playlist(songs) {
     }
 
     Playlist.prototype.shuffle = function () {
-        return this.songs.sort(function () { return Math.random() - 0.5 });
+        this.songs = this.songs.sort(function () { return Math.random() - 0.5 });
     }
 
-    Playlist.prototype.nextSong = function (shuffled) {
-        if (shuffled) {
-            return shuffled[0];
+    Playlist.prototype.nextSong = function () {
+        playing += 1;
+        if (playing == this.songs.length) {
+            playing = 0;
         }
-        return this.songs[0];
+        return this.songs[playing];
     }
 
     Playlist.prototype.top = function () {
@@ -60,7 +62,7 @@ function Playlist(songs) {
         artistas.forEach(element => {
             artistas2[element]++;
         });
-        
+
         for (let i = 0; i < 5; i++) {
             let mayor = 0;
             for (grupo in artistas2) {

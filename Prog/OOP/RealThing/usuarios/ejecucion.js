@@ -21,7 +21,12 @@ function crearUsuario() {
 
     if (document.getElementById("mascota3").checked)
         mascotas.push("Loro");
+    let usuario = new Usuario(nombre, apellidos, sexo, edad, mascotas);
+    usuarios.push(usuario);
+    localStorage.setItem("Usuarios", usuarios);
+}
 
-    usuarios.push(new Usuario(nombre, apellidos, sexo, edad, mascotas));
-    console.log(usuarios)
+function cargar() {
+    let usuarios = localStorage.getItem("Usuarios");
+    console.log(usuarios);
 }
