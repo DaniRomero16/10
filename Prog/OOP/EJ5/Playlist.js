@@ -1,11 +1,28 @@
-function Playlist(songs) {
+function Playlist(jPlaylist, nombre, songs) {
 
     this.songs = new Array();
-    this.playing = -1;
+    this.nombre = null;
 
-    if (songs) {
-        this.songs = songs;
+    if (jPlaylist) {
+        if (jPlaylist.nombre) {
+            this.nombre = jPlaylist.nombre;
+        }
+        if (jPlaylist.songs) {
+            jPlaylist.songs.forEach(element => {
+                let song = new Song(element);
+                this.songs.push(song);
+            });
+        }
+    } else {
+        if (nombre) {
+            this.nombre = nombre;
+        }
+
+        if (songs) {
+            this.songs = songs;
+        }
     }
+
 
     Playlist.prototype.addSong = function (song) {
         this.songs.push(song);
@@ -76,18 +93,43 @@ function Playlist(songs) {
                     delete artistas2[grupo];
                 }
             }
-
         }
-
-
         return top;
     }
 
     Playlist.prototype.orderByDuration = function () {
-        return this.songs.sort(function (a, b) {
+        this.songs.sort(function (a, b) {
             return b.getDuracion() - a.getDuracion();
         });
     }
 
+    Playlist.prototype.orderByGroup = function () {
+        this.songs.sort(function (a, b) {
+            if (a.grupo < b.grupo) {
+                return -1;
+            } else if (b.grupo < a.grupo) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+    }
 
+    Playlist.prototype.toJSONObject = function () {
+        let jPlaylist = {};
+
+        if (this.nombre) {
+            jPlaylist.nombre = this.nombre;
+        }
+        if (this.songs && this.songs.length > 0) {
+            let jSongArray = new Array();
+
+            this.songs.forEach(element => {
+                jSongArray.push(element.toJSONObject())
+            });
+
+            jPlaylist.songs = jSongArray;
+        }
+        return jPlaylist;
+    }
 }
