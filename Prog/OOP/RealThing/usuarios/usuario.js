@@ -1,46 +1,46 @@
-function Usuario(nombre, apellidos, sexo, edad, mascotas) {
+function Usuario(jUsuario, nombre, apellidos, sexo, edad, mascotas) {
 
-        this.ide = getRandomInt(0,999999);
+    this.mascotas = new Array();
+    if (jUsuario) {
+        this.ide = jUsuario.ide;
+        this.nombre = jUsuario.nombre;
+        this.apellidos = jUsuario.apellidos;
+        this.sexo = jUsuario.sexo;
+        this.edad = jUsuario.edad;
+        if (jUsuario.mascotas && jUsuario.mascotas.length > 0) {
+            this.mascotas = jUsuario.mascotas;
+        }
+    } else {
+        this.ide = getRandomInt(0, 999999);
 
-    if (nombre)
-        this.nombre = nombre;
+        if (nombre)
+            this.nombre = nombre;
 
-    if (apellidos)
-        this.apellidos = apellidos;
+        if (apellidos)
+            this.apellidos = apellidos;
 
-    if (sexo)
-        this.sexo = sexo;
+        if (sexo)
+            this.sexo = sexo;
 
-    if (edad)
-        this.edad = edad;
+        if (edad)
+            this.edad = edad;
 
-    if (mascotas)
-        this.mascotas = mascotas;
+        if (mascotas && mascotas.length > 0)
+            this.mascotas = mascotas;
+    }
 
-    let fieldsetU = document.createElement("fieldset");
-    let leyenda = document.createElement("legend");
-    leyenda.innerHTML = "Usuario " + this.ide;
-    let parr1 = document.createElement("p");
-    let parr2 = document.createElement("p");
-    let parr3 = document.createElement("p");
-    let parr4 = document.createElement("p");
-    let parr5 = document.createElement("p");
+    Usuario.prototype.toJSONObject = function () {
 
-    parr1.innerHTML = "Nombre: " + this.nombre;
-    parr2.innerHTML = "Apellidos: " + this.apellidos;
-    parr3.innerHTML = "Sexo: " + this.sexo;
-    parr4.innerHTML = "Edad: " + this.edad;
-    parr5.innerHTML = "Mascotas: ";
-    mascotas.forEach(element => {
-        parr5.innerHTML += element + " ";
-    });
+        let jUsuario = {};
 
-    fieldsetU.appendChild(leyenda);
-    fieldsetU.appendChild(parr1);
-    fieldsetU.appendChild(parr2);
-    fieldsetU.appendChild(parr3);
-    fieldsetU.appendChild(parr4);
-    fieldsetU.appendChild(parr5);
-
-    document.getElementById("usuarios").appendChild(fieldsetU);
+        jUsuario.ide = this.ide;
+        jUsuario.nombre = this.nombre;
+        jUsuario.apellidos = this.apellidos;
+        jUsuario.sexo = this.sexo;
+        jUsuario.edad = this.edad;
+        if (this.mascotas && this.mascotas.length > 0) {
+            jUsuario.mascotas = this.mascotas;
+        }
+        return jUsuario;
+    }
 }

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <script type="text/javascript" charset="UTF-8" src="utilidades.js"></script>
 <script type="text/javascript" charset="UTF-8" src="usuario.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../usuarios/storage/storageManager.js"></script>
 <script type="text/javascript" charset="UTF-8" src="ejecucion.js"></script>
 
 <head>
@@ -10,12 +12,13 @@
     <title>ey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
 </head>
 
 <body onload="cargar();">
 
     <div id="formulario">
-        <form>
+        <form id="myform">
             <br>
             <h3 align="center">Rellene los siguientes campos</h3><br>
             <fieldset>
@@ -29,9 +32,9 @@
             <fieldset>
                 <legend>Datos</legend>
                 Sexo:
-                <input type="radio" name="sexo" id="hombre" value="hombre">
+                <input type="radio" name="sexo" id="hombre">
                 <label for="hombre">Hombre</label>
-                <input type="radio" name="sexo" id="mujer" value="mujer">
+                <input type="radio" name="sexo" id="mujer">
                 <label for="mujer">Mujer</label>
                 <br><br>
                 <input type="text" name="edad" placeholder="Edad" size="3">
@@ -41,11 +44,11 @@
                 <legend>
                     ¿Vives con Mascotas?
                 </legend>
-                <input type="checkbox" name="mascota1" id="mascota1" value="perro">
+                <input type="checkbox" name="mascota1" id="mascota1">
                 <label for="mascota1">Perro</label>
-                <input type="checkbox" name="mascota2" id="mascota2" value="gato">
+                <input type="checkbox" name="mascota2" id="mascota2">
                 <label for="mascota2">Gato</label>
-                <input type="checkbox" name="mascota3" id="mascota3" value="loro">
+                <input type="checkbox" name="mascota3" id="mascota3">
                 <label for="mascota3">Loro</label>
             </fieldset><br>
 
