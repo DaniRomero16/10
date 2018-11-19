@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="Usuario.js"></script>
+    <script type="text/javascript" src="storage/StorageManager.js"></script>
+    <script type="text/javascript" src="ejecucion.js"></script>
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgba(119, 196, 196, 0.39)">
+    <footer id="form" style="float:left">
+        <h1>Ponte en contacto con nosotros</h1>
+        <form id="formulario">
+            <legend>Datos personales</legend>
+            <h4>Nombre</h4>
+            <input type="text" id="nombre" style="margin-bottom: 8px;margin-top:10px">
+            <br>
+            <h4>Apellidos</h4>
+            <input type="text" id="apellidos" name="apellidos">
+            <br>
+            <br>
+            <h4>Sexo</h4>
+            <input type="radio" name="sexo" checked> Hombre
+            <input type="radio" name="sexo"> Mujer
+            <br>
+            <h4>Mascotas</h4>
+            <input type="checkbox" id="perro" name="animal"> Perro
+            <input type="checkbox" id="gato" name="animal"> Gato
+            <input type="checkbox" id="loro" name="animal"> Loro
+            <br>
+            <br>
+			<select id="id_provincia">
+				<option value="malaga" selected>Málaga</option>
+				<option value="sevilla">Sevilla</option>
+				<option value="cadiz">Cádiz</option>
+				<option value="jaen">Jaen</option>
+				<option value="huelva">Huelva</option>
+				<option value="granada">Granada</option>
+				<option value="almeria">Almería</option>
+				<option value="cordoba">Cordoba</option>
+			</select>
+            <br>
+            <br>
+            <input type=button value="Add" onclick="crearUsuario();">
+			<span id="error"> </span>
+		</form>
+    </footer>
+    <div id="datos_usuario">
+		
+    </div>    
+</body>
+
+</html>
