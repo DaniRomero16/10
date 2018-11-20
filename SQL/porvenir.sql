@@ -4,26 +4,27 @@ create database porvenir;
 use porvenir;
 
 CREATE TABLE identificador (
-    idIden char(4) not null,
-    tipo_identificador varchar(20) NOT NULL,
+    idIden varCHAR(3) not null,
+    tipo_identificador varchar(25) NOT NULL,
     PRIMARY KEY(idIden)
 );
 
 CREATE TABLE sucursal (
     idSucursal INT NOT NULL AUTO_INCREMENT,
     direccion varchar(100) NOT NULL,
-    telefono varchar(100) NOT NULL,
-    comunidad VARCHAR(100) NOT NULL,
-    provincia VARCHAR(100) not null,
+    telefono varchar(20) NOT NULL,
+    comunidad VARCHAR(25) NOT NULL,
+    provincia VARCHAR(20) not null,
     PRIMARY KEY(idSucursal)
 );
 
 CREATE TABLE funcionario (
     idFuncionario INT NOT NULL AUTO_INCREMENT,
-    fecha_ingreso date NOT NULL,
-    nombre varchar(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    nivel_academico VARCHAR(100) not null,
+    fecha_ingreso timestamp NOT NULL default current_timestamp,
+    nombre varchar(30) NOT NULL,
+    primer_apellido VARCHAR(50) NOT NULL,
+    segundo_apellido VARCHAR(50),
+    nivel_academico char(3) not null,
     clasificacion char(1) not null,
     sucursal int not null,
     PRIMARY KEY(idFuncionario),
@@ -32,12 +33,13 @@ CREATE TABLE funcionario (
 
 CREATE TABLE cliente (
     idCliente INT NOT NULL AUTO_INCREMENT,
-    numIden VARCHAR(20) NOT NULL,
-    typeIden CHAR(4),
-    nombre VARCHAR(100) not NULL,
-    apellido VARCHAR(100) not NULL,
+    numIden VARCHAR(9) unique NOT NULL,
+    typeIden varCHAR(3) not null,
+    nombre VARCHAR(30) not NULL,
+    primer_apellido VARCHAR(50) not NULL,
+    segundo_apellido VARCHAR(50),
     birthdate date not null,
-    fecha_alta date not null,
+    fecha_alta timestamp default current_timestamp not null,
     funcionario int not null,
     PRIMARY KEY(idCliente),
     foreign key client_func_fk(funcionario) references funcionario (idFuncionario),

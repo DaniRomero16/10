@@ -37,7 +37,15 @@ function UsuarioBean(jUser, nombre, apellidos, sexo, ciudad, mascotas) {
 	UsuarioBean.prototype.mascotasToString = function(){
 		let dato = "";
 		if (this.mascotas.length > 0){
-			dato =  this.mascotas.toString();
+			for (let i = 0; i < this.mascotas.length; i++) {
+				dato += this.mascotas[i].nombre + ' ';
+				dato += 'Chip: ' + this.mascotas[i].chip_id + ' ';
+				for (let j = 0; j < this.mascotas[i].vacunas.length; j++) {
+					dato += 'Vacuna: ' + this.mascotas[i].vacunas[j].nombre + ' ';
+					
+				}
+				dato += '<br>';
+			}
 		}
 		return dato;
 	}

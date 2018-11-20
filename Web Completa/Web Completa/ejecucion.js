@@ -14,13 +14,13 @@ function crearUsuario() {
 
 	let animales = new Array();
 	if (document.getElementsByName("animal")[0].checked) {
-		animales.push("Perro");
+		animales.push(new Mascota(null, 'Perro', getRandomInt(1,9999),new Array(new Vacuna(null, 'Polivalente', new Date()), new Vacuna(null, 'Rabia', new Date()))));
 	}
 	if (document.getElementsByName("animal")[1].checked) {
-		animales.push("Gato");
+		animales.push(new Mascota(null, 'Gato', getRandomInt(1,9999),new Array(new Vacuna(null, 'Polivalente', new Date()))));
 	}
 	if (document.getElementsByName("animal")[2].checked) {
-		animales.push("Loro");
+		animales.push(new Mascota(null, 'Loro', getRandomInt(1,9999),new Array(new Vacuna(null, 'Polivalente', new Date()))));
 	}
 
 	let ciudad = document.getElementById("id_provincia").value;
@@ -127,23 +127,3 @@ function datosUsuario(user) {
 
 	return table;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

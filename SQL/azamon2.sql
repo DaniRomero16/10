@@ -52,9 +52,10 @@ select u.name, count(distinct s.product_id) as 'Products Bought'
 from sales s
 inner join users u on (s.user_id = u.user_id)
 group by u.name;
-    
+
 -- #26 List the sum of sales with price over 10 by product only if the sum of sales for that product is higher than 20.
 
+explain
 select sum(s.price), p.name
 from sales s
 inner join products p on (s.product_id = p.product_id)
