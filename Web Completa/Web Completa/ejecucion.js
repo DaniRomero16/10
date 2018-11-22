@@ -127,3 +127,35 @@ function datosUsuario(user) {
 
 	return table;
 }
+
+function addField(){
+	let div = document.getElementById("nuevosCampos");
+	div.appendChild(addPetForm());	
+}
+
+function addPetForm(){
+	let divPet = document.createElement("div");
+	divPet.id = "PetForm" + contador;
+	
+	let PetSelect = document.createElement("select");
+	
+	let PetSOp1 = document.createElement("option");
+	PetSOp1.value = "Perro";
+	PetSOp1.innerHTML = "Perro";
+	let PetSOp2 = document.createElement("option");
+	PetSOp2.value = "Gato";
+	PetSOp2.innerHTML = "Gato";
+	let PetSOp3 = document.createElement("option");
+	PetSOp3.value = "Loro";
+	PetSOp3.innerHTML = "Loro";
+	
+	PetSelect.appendChild(PetSOp1);
+	PetSelect.appendChild(PetSOp2);
+	PetSelect.appendChild(PetSOp3);
+	
+	divPet.appendChild(PetSelect);
+		
+	contador++;
+	
+	return divPet;
+}

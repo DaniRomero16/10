@@ -67,9 +67,6 @@ function UsuarioBean(jUser, nombre, apellidos, sexo, ciudad, mascotas) {
         
         return jUser;
     }
-
-
-
 }
 
 

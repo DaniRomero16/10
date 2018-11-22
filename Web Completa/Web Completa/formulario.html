@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+    
+    var contador = 0;
+    
+    </script>
     <script type="text/javascript" src="utilidades.js"></script>
     <script type="text/javascript" src="vacuna.js"></script>
     <script type="text/javascript" src="mascota.js"></script>
@@ -48,6 +53,8 @@
 				<option value="cordoba">Cordoba</option>
 			</select>
             <br>
+            <input type=button value="Añadir Mascota" onclick="addField();">
+            <div id="nuevosCampos"></div>
             <br>
             <input type=button value="Add" onclick="crearUsuario();">
 			<span id="error"> </span>

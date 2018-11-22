@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio Tareas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/main.css" />
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <script src="../JS/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../JS/ajax.1.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="border-bottom">Ejercicio: Mis tareas</h1>
+        <br>
+        <input type="text" id="inputTarea">
+        <input type="button" class="btn btn-primary m-2" id="anadir" value="Añadir Tarea">
+        <br>
+        <div class="text-center row m-2">
+            <div class="col-4 border-top">
+                <h2>Tareas Pendientes</h2>
+            </div>
+            <div class="col-4 border-top">
+                <h2>Tareas para probar</h2>
+            </div>
+            <div class="col-4 border-top">
+                <h2>Tareas Realizadas</h2>
+            </div>
+        </div>
+        <div class="row justify-content-around caja">
+            <div class="p-0 col-4 border border-dark">
+                <ul class="text-center list-group" id="pendientes">
+                    
+                </ul>
+            </div>
+            <div class="p-0 col-4 border border-dark caja">
+                <ul class="text-center list-group" id="probar">
+                    
+                </ul>
+            </div>
+            <div class="p-0 col-4 border border-dark caja">
+                <ul class="text-center list-group" id="realizadas">
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
