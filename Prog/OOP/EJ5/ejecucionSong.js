@@ -31,15 +31,4 @@ let miPlaylist = new Playlist(null, null, new Array(song1, song2, song3, song4, 
     song10, song11, song12, song13, song14, song15, song16, song17, song18, songMarta, songMarta2,
     songMarta3, songMarta4, songMarta5, songMarta6, songMarta7, songMarta8, songMarta9));
 
-// let jPlaylist = JSON.stringify(miPlaylist.toJSONObject());
-
-// let prueba = new Playlist(JSON.parse(jPlaylist));
-// console.log(prueba);
-
-printDate(new Date())
-
-function printDate(date) {
-    console.log(date.getDate() + " del " + (date.getMonth()+1) + " del " + 
-    date.getFullYear() + " a las " + date.getHours() + ":" + date.getMinutes() + 
-    ":" + date.getSeconds() + ":" + date.getMilliseconds());
-}
+    playlist = miPlaylist;
