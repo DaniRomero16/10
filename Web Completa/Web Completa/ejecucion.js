@@ -13,14 +13,13 @@ function crearUsuario() {
 	}
 
 	let animales = new Array();
-	if (document.getElementsByName("animal")[0].checked) {
-		animales.push(new Mascota(null, 'Perro', getRandomInt(1,9999),new Array(new Vacuna(null, 'Polivalente', new Date()), new Vacuna(null, 'Rabia', new Date()))));
-	}
-	if (document.getElementsByName("animal")[1].checked) {
-		animales.push(new Mascota(null, 'Gato', getRandomInt(1,9999),new Array(new Vacuna(null, 'Polivalente', new Date()))));
-	}
-	if (document.getElementsByName("animal")[2].checked) {
-		animales.push(new Mascota(null, 'Loro', getRandomInt(1,9999),new Array(new Vacuna(null, 'Polivalente', new Date()))));
+	
+	for (let i = 1; i < contador; i++) {
+		let vacunas = new Array();
+		vacunas.push(new Vacuna(null, document.getElementById('vacuneSelect' + i).value, document.getElementById('dates' + i).value));
+
+		animales.push(new Mascota(null, document.getElementById('PetForm' + i).value, getRandomInt(1, 999), vacunas));
+
 	}
 
 	let ciudad = document.getElementById("id_provincia").value;
@@ -65,8 +64,8 @@ function pintarDatosUsuario() {
 
 
 	let usuarios = StorageManager.getUsers();
-	
-	
+
+
 	let tr = null;
 	let table = document.createElement("table");
 	document.getElementById("datos_usuario").innerHTML = '';
@@ -85,7 +84,7 @@ function pintarDatosUsuario() {
 				tr = document.createElement("tr");
 				tr.appendChild(td);
 				table.appendChild(tr);
-			} 
+			}
 			tr.appendChild(td);
 		}
 	};
@@ -128,17 +127,18 @@ function datosUsuario(user) {
 	return table;
 }
 
-function addField(){
+function addField() {
 	let div = document.getElementById("nuevosCampos");
-	div.appendChild(addPetForm());	
+	div.appendChild(addPetForm());
+	div.appendChild(addVacuneForm());
 }
 
-function addPetForm(){
+function addPetForm() {
 	let divPet = document.createElement("div");
-	divPet.id = "PetForm" + contador;
-	
+
 	let PetSelect = document.createElement("select");
-	
+	PetSelect.id = "PetForm" + contador;
+
 	let PetSOp1 = document.createElement("option");
 	PetSOp1.value = "Perro";
 	PetSOp1.innerHTML = "Perro";
@@ -148,14 +148,49 @@ function addPetForm(){
 	let PetSOp3 = document.createElement("option");
 	PetSOp3.value = "Loro";
 	PetSOp3.innerHTML = "Loro";
-	
+
+	let petNumber = document.createElement("h4");
+	petNumber.innerHTML = 'Mascota: ' + contador;
+
+	divPet.appendChild(petNumber);
 	PetSelect.appendChild(PetSOp1);
 	PetSelect.appendChild(PetSOp2);
 	PetSelect.appendChild(PetSOp3);
-	
+
 	divPet.appendChild(PetSelect);
-		
-	contador++;
-	
+
 	return divPet;
+}
+function addVacuneForm() {
+	let divVacune = document.createElement("div");
+
+
+	let VacuneSelect = document.createElement("select");
+	VacuneSelect.id = "vacuneSelect" + contador;
+
+	let VacuneSOp1 = document.createElement("option");
+	VacuneSOp1.value = "Polivalente";
+	VacuneSOp1.innerHTML = "Polivalente";
+	let VacuneSOp2 = document.createElement("option");
+	VacuneSOp2.value = "Rabia";
+	VacuneSOp2.innerHTML = "Rabia";
+	let VacuneSOp3 = document.createElement("option");
+	VacuneSOp3.value = "Parvovirus";
+	VacuneSOp3.innerHTML = "Parvovirus";
+
+	let vacuneDate = document.createElement("input")
+	vacuneDate.setAttribute("type", "date");
+	vacuneDate.id = "dates" + contador;
+	vacuneDate.placeholder = "dates";
+
+	VacuneSelect.appendChild(VacuneSOp1);
+	VacuneSelect.appendChild(VacuneSOp2);
+	VacuneSelect.appendChild(VacuneSOp3);
+
+	divVacune.appendChild(VacuneSelect);
+	divVacune.appendChild(vacuneDate);
+
+	contador++;
+
+	return divVacune;
 }
