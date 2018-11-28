@@ -1,16 +1,21 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+const PORT = 3000;
 var app = express();
 
-app.use(bodyParser.urlencoded({extended:false}));
-
+//middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-app.get('/prueba', function(request,response){
-    response.status(200).send(
-        '<h1>Página de dfgj</h1>'
-    )
+//------------
+//configuracion de archivos
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/public/views');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+//------------
+//creacion del servidor
+app.listen(PORT, () =>{
+    console.log('Servidor corriendo correctamente');
 });
-module.exports = app;
 
+module.exports = app;
