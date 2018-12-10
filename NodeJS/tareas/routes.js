@@ -1,68 +1,26 @@
-var con = require('./database');
+var tareasController = require('./controllers/tareasController');
 var app = require('./app');
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart({ uploadDir: './public/img' });
+
 
 //rutas
-app.get('/',function(req, res){
+app.get('/', function (req, res) {
     res.render('index');
 });
 
 //insert tareas
-app.post('/tareas/add',function(req,res){
-    let sql = `INSERT INTO tarea (nombre) VALUES ('${req.body.nombre}')`;
-    con.query(sql, function(err, result){
-        if (err) {
-            console.log(err);
-            res.send(err);
-        } else {
-            let tarea = {
-                id: result.insertId,
-                nombre: req.body.nombre,
-                estado: req.body.estado
-            }
-            res.send(tarea);
-        }
-    });
-});
+app.post('/tareas/add', tareasController.addTarea);
 
 //consultar registros
-app.get('/tareas/get', function(req, res){
-    let sql = 'SELECT * from tarea';
-    con.query(sql, function(err, result){
-        if (err) {
-            res.send(err);
-        } else {
-            res.send(result);
-        }
-    });
-});
+app.get('/tareas/get', tareasController.getTareas);
 
 //eliminar registros
-app.post('/tareas/delete', function(req, res){
-    let sql = `delete from tarea where id=${req.body.id}`;
-    con.query(sql, function(err, result){
-        if (err) {
-            res.send(err);
-        } else {
-            res.send(result);
-        }
-    });
-});
+app.post('/tareas/delete', tareasController.deleteTareas);
 
 //modificar registros
-app.post('/tareas/update', function(req, res){
-    let sql = `update tarea set estado='${req.body.estado}' where id=${req.body.id}`;
-    con.query(sql, function(err, result){
-        if (err) {
-            res.send(err);
-        } else {
-            let tarea = {
-                nombre: req.body.nombre,
-                result: result
-            }
-            res.send(tarea);
-        }
-    });
-});
+app.post('/tareas/update', tareasController.updateTareas);
+
+app.post('/tareas/addimg', multipartMiddleware, tareasController.addImg);
 
 module.exports = app;
-module.exports = con;
