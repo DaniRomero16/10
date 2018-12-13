@@ -2,9 +2,9 @@ var con = require('../database');
 var fs = require('fs');
 
 var controller = {
-    addTarea: function(req,res){
+    addTarea: function (req, res) {
         let sql = `INSERT INTO tarea (nombre) VALUES ('${req.body.nombre}')`;
-        con.query(sql, function(err, result){
+        con.query(sql, function (err, result) {
             if (err) {
                 console.log(err);
                 return res.send(err);
@@ -18,9 +18,9 @@ var controller = {
             }
         });
     },
-    getTareas: function(req, res){
+    getTareas: function (req, res) {
         let sql = 'SELECT * from tarea';
-        con.query(sql, function(err, result){
+        con.query(sql, function (err, result) {
             if (err) {
                 return res.send(err);
             } else {
@@ -28,9 +28,9 @@ var controller = {
             }
         });
     },
-    deleteTareas: function(req, res){
+    deleteTareas: function (req, res) {
         let sql = `delete from tarea where id=${req.body.id}`;
-        con.query(sql, function(err, result){
+        con.query(sql, function (err, result) {
             if (err) {
                 return res.send(err);
             } else {
@@ -38,9 +38,9 @@ var controller = {
             }
         });
     },
-    updateTareas: function(req, res){
+    updateTareas: function (req, res) {
         let sql = `update tarea set estado='${req.body.estado}' where id=${req.body.id}`;
-        con.query(sql, function(err, result){
+        con.query(sql, function (err, result) {
             if (err) {
                 return res.send(err);
             } else {
@@ -56,11 +56,11 @@ var controller = {
         let oldPath = req.files.foto.path;
         let newPath = './public/img/' + req.files.foto.originalFilename;
         let todb = '../img/' + req.files.foto.originalFilename;
-        fs.rename(oldPath, newPath, function (err) { 
-    
+        fs.rename(oldPath, newPath, function (err) {
+
         });
         let sql = `INSERT INTO tarea (nombre, foto) VALUES ('${req.body.nombre}','${todb}')`;
-        con.query(sql, function(err, result){
+        con.query(sql, function (err, result) {
             if (err) {
                 return res.send(err);
             } else {
@@ -72,7 +72,19 @@ var controller = {
                 return res.send(tarea);
             }
         });
-    
+
+    },
+    getTarea: function (req, res) {
+        let sql = `SELECT * from tarea where id=${req.query.id}`;
+        con.query(sql, function (err, result) {
+            if (err) {
+                return res.send(err);
+            } else {
+                return res.render('example', {
+                    resultado: result
+                });
+            }
+        })
     }
 }
 

@@ -10,11 +10,13 @@
   "author": "Daniel Romero",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "connect": "^3.6.6",
     "connect-multiparty": "^2.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "multiparty": "^4.2.1",
     "mysql": "^2.16.0"
   },
