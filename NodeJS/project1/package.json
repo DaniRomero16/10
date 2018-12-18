@@ -4,7 +4,7 @@
   "description": "Martes 27",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "nodemon index.js"
   },
   "author": "Daniel Romero",
@@ -15,9 +15,13 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "mongoose": "^5.4.0",
     "mysql": "^2.16.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.7"
   }
 }

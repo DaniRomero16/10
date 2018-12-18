@@ -20,7 +20,10 @@ app.get('/home', auth, function(req, res){
 });
 
 //insert proyectos
-app.post('/proyectos/add',ProjectController.addProject);
+app.post('/proyectos/add',ProjectController.addProjectMongo);
+app.get('/proyectos/getmongo',ProjectController.getProjects);
+app.post('/proyectos/deletemongo',ProjectController.deleteProjects);
+app.post('/proyectos/updatemongo',ProjectController.updateProject);
 
 app.post('/users/register', UsersController.registerUser);
 
@@ -54,13 +57,14 @@ app.post('/proyectos/delete', function(req, res){
 
 //modificar registros
 app.post('/proyectos/update', function(req, res){
-    let sql = `update proyectos set nombre='${req.body.name}' where id=${req.body.id}`;
+    let sql = `update proyectos set nombre='${req.body.nombre}' where id=${req.body.id}`;
     con.query(sql, function(err, result){
         if (err) {
             res.send(err);
         } else {
             let proyecto = {
-                nombre: req.body.name
+                nombre: req.body.nombre,
+                affectedRows: result.affectedRows
             }
             res.send(proyecto);
         }

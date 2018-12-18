@@ -1,15 +1,9 @@
-var mysql = require('mysql');
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/tareas', { useNewUrlParser: true })
+    .then(() => {
+        console.log('La conexión a MongoDB ha sido realizada correctamente')
+    })
+    .catch(err => console.log(err));
 
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database:"tareas"
-});
-  
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-});
-
-module.exports = con;
+module.exports = mongoose;

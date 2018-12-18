@@ -1,57 +1,49 @@
-var con = require('../database');
 var fs = require('fs');
+tareaModel = require('../models/tarea');
 
 var controller = {
-    addTarea: function (req, res) {
-        let sql = `INSERT INTO tarea (nombre) VALUES ('${req.body.nombre}')`;
-        con.query(sql, function (err, result) {
+    addTarea: (req, res) => {
+        tarea = new tareaModel();
+        tarea.nombre = req.body.name;
+        tarea.save((err, result) => {
             if (err) {
-                console.log(err);
                 return res.send(err);
             } else {
-                let tarea = {
-                    id: result.insertId,
-                    nombre: req.body.nombre,
-                    estado: req.body.estado
-                }
-                return res.send(tarea);
+                return res.status(200).send(result)
             }
-        });
+        })
     },
-    getTareas: function (req, res) {
-        let sql = 'SELECT * from tarea';
-        con.query(sql, function (err, result) {
+    getTareas: (req, res) => {
+        tareaModel.find({}, (err, result) => {
             if (err) {
-                return res.send(err);
+                res.send(err)
             } else {
-                return res.send(result);
+                res.status(200).send(result);
             }
-        });
+
+        })
     },
     deleteTareas: function (req, res) {
-        let sql = `delete from tarea where id=${req.body.id}`;
-        con.query(sql, function (err, result) {
+        tareaModel.findByIdAndDelete(req.body.id, (err, result) => {
             if (err) {
-                return res.send(err);
+                res.send(err)
             } else {
-                return res.send(result);
+                res.status(200).send(result);
             }
-        });
+        })
     },
     updateTareas: function (req, res) {
-        let sql = `update tarea set estado='${req.body.estado}' where id=${req.body.id}`;
-        con.query(sql, function (err, result) {
-            if (err) {
-                return res.send(err);
-            } else {
-                let tarea = {
-                    nombre: req.body.nombre,
-                    result: result
-                }
-                return res.send(tarea);
+            let update = {
+                estado: req.body.estado
             }
-        });
-    },
+            tareaModel.findByIdAndUpdate(req.body.id, update, (err, result) => {
+                if (err) {
+                    res.send(err)
+                } else {
+                    res.status(200).send(result);
+                }
+            })
+        },
     addImg: function (req, res) {
         let oldPath = req.files.foto.path;
         let newPath = './public/img/' + req.files.foto.originalFilename;
@@ -59,24 +51,20 @@ var controller = {
         fs.rename(oldPath, newPath, function (err) {
 
         });
-        let sql = `INSERT INTO tarea (nombre, foto) VALUES ('${req.body.nombre}','${todb}')`;
-        con.query(sql, function (err, result) {
+        tarea = new tareaModel();
+        tarea.nombre = req.body.name;
+        tarea.foto = todb;
+        tarea.save((err, result) => {
             if (err) {
                 return res.send(err);
             } else {
-                let tarea = {
-                    id: result.insertId,
-                    nombre: req.body.nombre,
-                    foto: todb
-                }
-                return res.send(tarea);
+                return res.status(200).send(result)
             }
-        });
+        })
 
     },
     getTarea: function (req, res) {
-        let sql = `SELECT * from tarea where id=${req.query.id}`;
-        con.query(sql, function (err, result) {
+        tareaModel.findById(req.query.id, function (err, result) {
             if (err) {
                 return res.send(err);
             } else {
@@ -84,7 +72,8 @@ var controller = {
                     resultado: result
                 });
             }
-        })
+        });
+        
     }
 }
 

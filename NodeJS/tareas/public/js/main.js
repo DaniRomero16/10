@@ -4,6 +4,7 @@ $(function () {
     $('ul').disableSelection();
 
     $.get('http://localhost:3000/tareas/get', function (res) {
+        console.log(res)
         res.forEach(e => {
             let ObjLi = $('<li></li>');
             let boton = $('<input type="button" class="btn btn-danger btn-sm mx-3 borrarTarea" value="Borrar">');
@@ -11,9 +12,12 @@ $(function () {
             img.css('width', '23%');
             ObjLi.text(e.nombre);
             ObjLi.addClass('list-group-item');
-            ObjLi.attr('id', e.id);
+            ObjLi.attr('id', e._id);
             ObjLi.append(boton);
-            ObjLi.append(img);
+            if(e.foto){
+                ObjLi.append(img);
+            }
+            
 
             if (e.estado == 'pendiente') {
                 $('#pendientes').append(ObjLi);
@@ -28,14 +32,15 @@ $(function () {
     $('#anadir').on('click', function () {
         let tarea = $('#inputTarea').val();
         let data = {
-            nombre: tarea
+            name: tarea
         };
         $.post('http://localhost:3000/tareas/add', data, function (res) {
+            console.log(res)
             let ObjLi = $('<li></li>');
             let boton = $('<input type="button" class="btn btn-danger btn-sm mx-3 borrarTarea" value="Borrar">');
             ObjLi.text(res.nombre);
             ObjLi.addClass('list-group-item');
-            ObjLi.attr('id', res.id);
+            ObjLi.attr('id', res._id);
             ObjLi.append(boton);
             $('#pendientes').append(ObjLi);
         });

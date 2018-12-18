@@ -12,7 +12,7 @@ var auth = function (req, res, next) {
 };
 //rutas
 app.get('/', function (req, res) {
-    res.render('log');
+    res.render('index');
 });
 
 app.get('/home', auth, function (req, res) {
