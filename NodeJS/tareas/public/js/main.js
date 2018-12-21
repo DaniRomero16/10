@@ -123,4 +123,11 @@ $(function () {
 
     });
 
+    var logout = $( '#logout' );
+    logout.on('click', function () {
+        $.get('/logout', function (res) {
+            setTimeout(function () { location.href = '/'; }, 350);
+        });
+    });
+
 });

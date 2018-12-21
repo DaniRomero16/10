@@ -10,12 +10,8 @@ var auth = function (req, res, next) {
     else
         return res.render('log');
 };
-//rutas
-app.get('/', function (req, res) {
-    res.render('index');
-});
 
-app.get('/home', auth, function (req, res) {
+app.get('/', auth, function (req, res) {
     res.render('index', {
         rol: req.session.user.rol,
         name: req.session.user.user
@@ -24,6 +20,7 @@ app.get('/home', auth, function (req, res) {
 
 app.post('/users/register', UsersController.registerUser);
 app.post('/users/login', UsersController.loginUser);
+app.get('/logout', UsersController.logoutUser);
 
 //insert tareas
 app.post('/tareas/add', tareasController.addTarea);
