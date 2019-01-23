@@ -24,3 +24,5 @@ Auth::routes();
 
 
 Route::any('/upload', 'Home@upload');
+
+Route::post('/nuevapelicula', 'Home@nuevapeli')->name("nuevapelicula");

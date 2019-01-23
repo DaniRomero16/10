@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Pelicula;
 
 class Home extends Controller
 {
     public function home(){
-        return view('welcome');
+        $pelicula = new Pelicula;
+        return view('peliculas', ['pelicula' => $pelicula]);
+    }
+    public function nuevapeli(Request $request){
+        dd($request->all());
     }
     
     public function login(){ 
